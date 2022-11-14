@@ -6,6 +6,13 @@ Clement Caton Last update : 14/11/22
 
 - [Summary](#summary)
 - [Requirements](#requirements)
+- [Objectives](#objectives)
+- [Functional specification](#functional-specification-1)
+- [Design change requests](#design-change-requests)
+- [Logic specification.](#logic-specification)
+- [User documentation](#user-documentation)
+- [Test plan](#test-plan)
+- [The final product](#the-final-product)
 
 
 ## Requirements.
