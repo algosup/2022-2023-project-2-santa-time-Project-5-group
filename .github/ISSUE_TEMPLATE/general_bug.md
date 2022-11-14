@@ -1,3 +1,12 @@
+---
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: bug
+assignees: ''
+
+---
+
 ## **Area**
 
 Where the bug is located. (e.g. `Core`, `UI`, `UX`, `Web`, `Mobile`, `Desktop`, `CLI`, `API`, `Extensions`, `Plugins`, `Themes`, `Documentation`, `Other`)
