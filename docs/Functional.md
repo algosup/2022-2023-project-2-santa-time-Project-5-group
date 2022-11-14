@@ -7,9 +7,6 @@ Clement Caton Last update : 14/11/22
 - [Summary](#summary)
 - [Requirements](#requirements)
 - [Objectives](#objectives)
-- [Functional specification](#functional-specification-1)
-- [Design change requests](#design-change-requests)
-- [Logic specification.](#logic-specification)
 - [User documentation](#user-documentation)
 - [Test plan](#test-plan)
 - [The final product](#the-final-product)
@@ -28,31 +25,15 @@ Clement Caton Last update : 14/11/22
 
 ### Non-functional requirements
 
-- The service will be able to handle 25k requests per second.
-- The service will not have a problem with geocoding api rate limiting.
+- The service will be able to handle 10k requests per minute.
+- The service will not call an external API.
 
 ## Objectives.
 <!--Objectives are written by product designers in response to the requirements. They describe in a more specific way what the product will look like. Objectives may describe architectures, protocols and standards to which the product will conform. Measurable objectives are those that set some criteria by which the end product can be judged. Measurability can be in terms of some index of customer satisfaction or in terms of capabilities and task times. Objectives must recognize time and resource constraints. The development schedule is often part or a corollary of the objectives.-->
 
-It will be a single web page with an input field and a textured sphere looking like the earth. The user will be able to enter a postal address or a coordinate and the page will show where it is on the map and will show the time for Santa to arrive somewhere on the page.
-
-## Functional specification.
-<!--The functional specification (called functional spec or just spec for short) is the formal response to the objectives. It describes all external user and programming interfaces that the product must support.-->
-
-It must be supported by the majority of current browsers OSs and devices. 
-
-## Design change requests.
-<!--Throughout the development process, as the need for change to the functional specification is recognized, a formal change is described in a design change request.-->
-
-
-
-## Logic specification.
-<!--The structure of the programming (for example, major groups of code modules that support a similar function), individual code modules and their relationships and the data parameters that they pass to each other may be described in a formal document called a logic specification. The logic specification describes internal interfaces and is for use only by the developers, testers and, later, to some extent, the programmers that service the product and provide code fixes to the field.-->
-
-Convert the postal address to coordinates.
-Convert the coordinates to a time.
-Display a globe.
-Display the coordinates on the globe.
+It will be a single web page with an input field. The user will be able to enter a postal address or a coordinate and the page will show the time for Santa to arrive on the page.
+The service will be able to scale depending on the number of requests per minute.
+It will be supported by the majority of current browsers OSs and devices. 
 
 ## User documentation.
 <!--In general, all of the preceding documents (except the logic specification) are used as source material for the technical manuals and online information, such as help pages, that are prepared for the product's users.-->
