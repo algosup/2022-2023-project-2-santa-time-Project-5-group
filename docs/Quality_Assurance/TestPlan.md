@@ -126,6 +126,7 @@ The test deliverables will be the following:
 For the test, the following hardware will be used:
 
   * **Computer** - A computer with Windows 11, Ubuntu 20.04, and MacOS 12.
+  * **Computer** - A Minitel with internet connection.
   * **Smartphone** - A smartphone with Android 12.
   * **Smartphone** - A smartphone with iOS 15.
 
