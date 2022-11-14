@@ -94,6 +94,7 @@ The test environment will be the following:
   * **Web Browser** - Mozilla Firefox
   * **Web Browser** - Microsoft Edge
   * **Web Browser** - Microsoft Edge (Chromium)
+  * **Web Browser** - White Board
   
   * **Web Browser** - Google Chrome (Android)
   * **Web Browser** - Mozilla Firefox (Android)
