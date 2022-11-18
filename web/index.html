@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.99/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.99/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cesiumContainer"></div>
+    <script>
+        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4NjIzNmM1ZS1iMzU4LTRkZDAtOTk1Ny1jNDg3MDM3YjkxMGIiLCJpZCI6MTE0MDEwLCJpYXQiOjE2Njc4NDYwMzF9.bMcv28ZFlv_uCXYQ6IIDTGLZGU7X-_Oj8K-zwNJsfPY';
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            terrainProvider: Cesium.createWorldTerrain()
+        });
+        const scene = viewer.scene;
+    </script>
+    </div>
+    
+
+
+
+    <div id="countdown">
+        <div class="clock" id="clock1">
+            <div data-value="days"></div><span>D</span>
+            <div data-value="hours"></div><span>H</span>
+            <div data-value="minutes"></div><span>M</span>
+            <div data-value="seconds"></div><span>s</span>
+        </div>
+    </div>
+    <script src="./js/countdown.js"></script>
+    <script src="./js/init.js"></script>
+</body>
+
+</html>

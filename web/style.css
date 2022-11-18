@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+
+#cesiumContainer {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.cesium-viewer-animationContainer,
+.cesium-viewer-timelineContainer,
+.cesium-viewer-fullscreenContainer,
+.cesium-viewer-bottom,
+.cesium-sceneModePicker-wrapper,
+.cesium-home-button,
+.cesium-navigationHelpButton-wrapper,
+.cesium-button{
+    display: none !important;
+}
+.cesium-viewer-geocoderContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.cesium-viewer-geocoderContainer .cesium-geocoder-input, .cesium-viewer-geocoderContainer:hover .cesium-geocoder-input, .cesium-viewer-geocoderContainer:focus .cesium-geocoder-input, .cesium-viewer-geocoderContainer:active .cesium-geocoder-input, .cesium-viewer-geocoderContainer .cesium-geocoder-input:focus {
+    width: 100%;
+    padding: 0 0 0 4px;
+    border-color:#aef;
+    box-shadow:0 0 8px #fff
+}
+.cesium-viewer-geocoderContainer{
+    max-width: calc(100% - 8px);
+}
+
+#countdown {
+    position: fixed;
+    width: 70%;
+    max-width: 400px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+#clock1 div{
+    color: rgba(95, 223, 9, 0.801);
+    width: 20%;
+}
+#clock1 span{
+    color: rgba(255, 255, 255, 0.425);
+    font-size: 1.8rem;
+} 
+#clock1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+}
