@@ -114,6 +114,7 @@ The test plan is written [here](./Quality_Assurance\TestPlan.md).
 
 We don't want to limit our users base to be in Vierzon. So we will not do any physical exposure in Vierzon.
 We prefer to keep it online and accessible to everyone.
+
 ## The final product.
 
 The final product can be found at [xmas.algosup.com](https://xmas.algosup.com/).
