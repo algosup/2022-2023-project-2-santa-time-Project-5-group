@@ -10,7 +10,7 @@ Clement Caton Last update : 18/11/22
 - [Objectives](#objectives)
 - [User documentation](#user-documentation)
 - [Test plan](#test-plan)
-- [Marketing](#marketing)
+- [Marketing plan](#marketing-plan)
 - [The final product](#the-final-product)
 
 
@@ -30,31 +30,9 @@ Clement Caton Last update : 18/11/22
 - The service will be scalable thanks to kubernetes
 
 ## Personae
-<!--
-https://medium.com/an-idea/persona-understanding-potential-users-e66478e64fcc
-    The Important Essentials of a Persona
-1 Name and Picture. The name and the picture represent the identity of the character. It make the character seems more believable. So we must find a picture that best represents our potential users.
 
-2 Age. The persona has to have an age that represents our target group. It helps us to design our product, for example, the theme and the style of a website.
-3 Education. Understanding user’s educational background helps us dictate what kind of word choice will be used on product’s content.
-
-4 Background. The background helps us determine the users’ motivation to use our product. The background can be represented by the user’s job.
-
-5 Skills. Understanding the skills of our persona helps us discover how technically skilled our users are and also discover the users’ pre-existing knowledge before using our product. We can find out whether the users are experts or not.
-
-6 Geography. It makes sure that our users won’t have the cultural or geography issues with our product’s content.
-
-7 Platform. We must understand which platforms they are using to access our product. For example, if they use iOS devices, we have to make sure that our product will be responsive on iOS devices.
-
-8 Goal. Understanding users’ goal helps us design a product that help users to achieve their goal. If they achieve their goal through our product, they will be so pleased and frequently using our products with no doubts.
-
-9 Motivation. It helps us to understand user’s scenario on using the product.
-
-10 Pain points or frustrations. It help us understand what the users don’t like. By understanding it, we can design products that avoid users’ pain points as much as possible so that the product will be comfortable for users.
--->
-
-Name: Marc<br>
 <img src="./thispersondoesnotexist/dev2.jpg" alt="drawing" width="200"/><br>
+Name: Marc<br>
 Age: 22<br>
 Education: Master's degree in computer science<br>
 Background: Student<br>
@@ -65,8 +43,8 @@ Goal: Find out when Santa will arrive<br>
 Motivation: I want to know why this website exists<br>
 Pain points or frustrations: I don't like to sign up to a service<br>
 
-Name: Lisa<br>
 <img src="./thispersondoesnotexist/kid.jpg" alt="drawing" width="200"/><br>
+Name: Lisa<br>
 Age: 8<br>
 Education: None<br>
 Background: Child<br>
@@ -77,8 +55,8 @@ Goal: Find out when Santa will arrive<br>
 Motivation: Embush Santa to prank him<br>
 Pain points or frustrations: I don't like hard interfaces<br>
 
-Name: James<br>
 <img src="./thispersondoesnotexist/old.jpg" alt="drawing" width="200"/><br>
+Name: James<br>
 Age: 65<br>
 Education: Right's degree<br>
 Background: Retired<br>
@@ -104,10 +82,38 @@ Write your adress in the field. And press enter.
 
 The test plan is written [here](./Quality_Assurance\TestPlan.md).
 
-## Marketing.
+## Marketing plan.
 
-martek.
+**HAVE TO BE VALIDATED WITH JEAN-PHILIPPE AND FRANCK**
 
+### Graphical identity
+
+**TO BE DEFINE WITH JEAN-PHILIPPE**
+
+### Social media
+
+- [ ] Post on Linkedin
+- [ ] Post on Instagram by ALGOSUP
+- [ ] Post on Instagram by ALGOSC
+- [ ] Repost on Linkedin by Franck Jeannin
+- [ ] Repost on Linkedin by Eric L'Archevèque
+- [ ] Repost on Linkedin by ALGOSUP
+- [ ] Link in AlgoBot description
+
+### Physical exposure
+
+- [ ] Poster in the school
+- [ ] QR Code at Epipapu (Vierzon)
+
+### Event exposure
+
+- [ ] Website displayed on the live of ALGOSC for the Telethon
+
+
+### Will not be done
+
+We don't want to limit our users base to be in Vierzon. So we will not do any physical exposure in Vierzon.
+We prefer to keep it online and accessible to everyone.
 ## The final product.
 
 The final product can be found at [xmas.algosup.com](https://xmas.algosup.com/).
