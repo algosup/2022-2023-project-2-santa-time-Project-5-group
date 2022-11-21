@@ -18,16 +18,15 @@ Clement Caton Last update : 18/11/22
 
 ### Functional requirements
 
-- The service will be able to ask the client to accept the use of his location.
 - The service will be able to take a postal address and return a time for Santa to arrive.
 - The service will be able to take a coordinate and return a time for Santa to arrive.
+- The service will be able to ask the client to accept the use of his location in order to use it's coordinates.
 - The service will take into consideration the [Equation of time](https://en.wikipedia.org/wiki/Equation_of_time).
 
 ### Non-functional requirements
 
 - The service will be able to handle 10k requests per minute.
 - The service will not call an external API.
-- The service will be scalable thanks to kubernetes
 
 ## Personae
 
@@ -38,7 +37,7 @@ Education: Master's degree in computer science<br>
 Background: Student<br>
 Skills: Good knowledge of computer science<br>
 Geography: France<br>
-Platform: Web Desktop<br>
+Platform: Web Desktop, weeks before christmas<br>
 Goal: Find out when Santa will arrive<br>
 Motivation: I want to know why this website exists<br>
 Pain points or frustrations: I don't like to sign up to a service<br>
@@ -50,10 +49,10 @@ Education: None<br>
 Background: Child<br>
 Skills: Knows of the existance of Santa<br>
 Geography: UK<br>
-Platform: Web Ipad<br>
+Platform: Web Ipad the night of christmas<br>
 Goal: Find out when Santa will arrive<br>
 Motivation: Embush Santa to prank him<br>
-Pain points or frustrations: I don't like hard interfaces<br>
+Pain points or frustrations: I don't can't navigate interfaces that are not clear<br>
 
 <img src="./thispersondoesnotexist/old.jpg" alt="drawing" width="200"/><br>
 Name: James<br>
@@ -62,17 +61,21 @@ Education: Right's degree<br>
 Background: Retired<br>
 Skills: Knows how to navigate a web page as long as it's not too hard<br>
 Geography: USA<br>
-Platform: Web Desktop<br>
+Platform: Web Desktop 1 or 2 days before christmas<br>
 Goal: Show to his grandsons when Santa will arrive<br>
 Motivation: I want to see the exitment in my grandsons' eyes<br>
-Pain points or frustrations: I can't navigate if the interface is not easy to use<br>
+Pain points or frustrations: I can't navigate if the interface is using dark patterns, or if I have 5 pages to navigate through in order to have the result.<br>
 
 
 ## Objectives.
 
 It will be a single web page with an input field. The user will be able to enter a postal address or a coordinate and the page will show the time for Santa to arrive on the page.
+
 The service will be able to scale depending on the number of requests per minute.
-It will be supported by the majority of current browsers OSs and devices. 
+
+It will be supported by the majority of current browsers OSs and devices.
+
+If the user accepts the use of his location, the service will use his coordinates to calculate the time for Santa to arrive. However, it will not disable the search bar in case he wants to see the time for another place.
 
 ## User documentation.
 
@@ -117,5 +120,6 @@ We prefer to keep it online and accessible to everyone.
 
 ## The final product.
 
+The mockup of the final product is [here](https://www.figma.com/file/Ad1soWlxQlV1hWfGDLaSYx/noel?node-id=0%3A1&t=2pMa35mv3Z7G65o9-1).<br>
 The final product can be found at [xmas.algosup.com](https://xmas.algosup.com/).
 
