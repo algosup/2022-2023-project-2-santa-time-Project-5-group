@@ -1,56 +1,38 @@
-// class to create a countdown timer
-class CountdownTimer {
-    // setup timer values
-    constructor({ selector, targetDate, backgroundColor = null, foregroundColor = null, offset = 0 }) {
-        this.selector = selector;
-        this.targetDate = targetDate;
-        this.backgroundColor = backgroundColor;
-        this.foregroundColor = foregroundColor;
-        this.offset = offset;
+(function () {
+    const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
 
-        // grab divs on frontend using supplied selector ID
-        this.refs = {
-            days: document.querySelector(`${this.selector} [data-value="days"]`),
-            hours: document.querySelector(`${this.selector} [data-value="hours"]`),
-            mins: document.querySelector(`${this.selector} [data-value="minutes"]`),
-            secs: document.querySelector(`${this.selector} [data-value="seconds"]`),
-        };
+    let today = new Date(),
+        dd = String(today.getDate()).padStart(2, "0"),
+        mm = String(today.getMonth() + 1).padStart(2, "0"),
+        yyyy = today.getFullYear(),
+        nextYear = yyyy + 1,
+        dayMonth = "12/24/",
+        xmas = dayMonth + yyyy;
+
+    today = mm + "/" + dd + "/" + yyyy;
+    if (today > xmas) {
+        xmas = dayMonth + nextYear;
     }
 
-    getTimeRemaining(endtime) {
-        const current = new Date();
-        const currentModifier = Date.parse(current) + 3600000 + this.offset; // 3 600 000 = 60 minutes
-        const t = new Date(currentModifier);
-        const total = Date.parse(endtime) - Date.parse(t);
-        console.log(total);
+    const countDown = new Date(xmas).getTime(),
+        x = setInterval(function () {
 
-        const days = Math.floor(total / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-        const mins = Math.floor((total / 1000 / 60) % 60);
-        const secs = Math.floor((total / 1000) % 60);
-        return {
-            total,
-            days,
-            hours,
-            mins,
-            secs,
-        };
-    }
+            const now = new Date().getTime(),
+                distance = countDown - now;
 
-    updateTimer({ days, hours, mins, secs }) {
-        this.refs.days.textContent = days;
-        this.refs.hours.textContent = hours;
-        this.refs.mins.textContent = mins;
-        this.refs.secs.textContent = secs;
-    }
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-
-    startTimer() {
-        const timer = this.getTimeRemaining(this.targetDate);
-        this.updateTimer(timer);
-        setInterval(() => {
-            const timer = this.getTimeRemaining(this.targetDate);
-            this.updateTimer(timer);
-        }, 1000);
-    }
-}
+            if (distance < 0) {
+                document.getElementById("headline").innerText = "It's christmas!";
+                document.getElementById("countdown").style.display = "none";
+                clearInterval(x);
+            }
+            //seconds
+        }, 0)
+}());

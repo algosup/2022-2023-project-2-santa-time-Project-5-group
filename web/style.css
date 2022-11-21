@@ -1,12 +1,56 @@
-body, h1 {
+:root {
+    --smaller: .75;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
     margin: 0;
 }
+
 body {
     height: 100vh;
     width: 100vw;
     /* background: rgb(23,19,93);
     background: linear-gradient(36deg, rgba(23,19,93,1) 0%, rgba(31,31,85,1) 25%, rgba(71,50,111,1) 50%, rgba(46,8,77,1) 75%, rgba(48,0,103,1) 100%); */
     background-image: url(ciel-etoile.jpg);
+    align-items: center;
+    background-color: #ffd54f;
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+}
+
+body, h1 {
+    margin: 0;
+}
+
+form {
+    width: 90%;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
 }
 
 .content {
@@ -22,15 +66,61 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .content h1 {
     font-size: 12rem;
     font-weight: 400;
     text-align: center;
     margin-bottom: 20px;
     letter-spacing: 10px;
-    font-family: 'Dosis', sans-serif;
     color: rgb(161, 161, 161);
 }
+
+.fiouuuuuuuuuuuuuu {
+    position: absolute;
+    height: 12%;
+    fill: #A1A1A1;
+    margin: 0 3%;
+    top: 84%;
+    left: 2.5%;
+    z-index: 999;
+}
+
+.search-spacer {
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 3% 0 0;
+}
+
+.fiou-start {
+    animation: 8s linear traino;
+}
+
+.fiou-end {
+    transform: translateX(1000px);
+}
+
+.searchbar-start {
+    animation: 4s linear dissapear;
+}
+
+.container-countdown {
+    color: #808080;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -19%;
+}
+
+/* ----------------------------- classList START ---------------------------- */
+.hidden {
+    visibility: hidden;
+}
+
+.reveal {
+    visibility: visible;
+}
+/* ------------------------------ classList END ----------------------------- */
+
 #searchbar {
     width: 100%;
     height: 60px;
@@ -43,61 +133,12 @@ body {
     background-color: #272727;
     opacity: 0.8;
 }
-.searchbar-start {
-    animation: 4s linear dissapear;
-}
-form {
-    width: 90%;
-}
+
 #searchbar:focus {
     background-color: #7c7c7c;
 }
-.fiouuuuuuuuuuuuuu{
-    position: absolute;
-    height: 12%;
-    fill: #A1A1A1;
-    margin: 0 3%;
-    top: 84%;
-    left: 2.5%;
-    z-index: 999;
-}
-.search-spacer{
-    height: 100%;
-    aspect-ratio: 1/1;
-    margin: 0 3% 0 0;
-}
-.fiou-start{
-    animation: 8s linear traino;
-}
-.fiou-end{
-    transform: translateX(1000px);
-}
 
-@keyframes traino {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(50vw);
-    }
-    55% {
-        transform: translateX(53vw) translateY(-50px) rotate(-45deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(120vw) translateY(-70vw) rotate(-45deg);
-        opacity: 0;
-    }
-}
-@keyframes dissapear {
-    0% {
-    }
-    100% {
-        width: 0;
-        margin-left: 100%;
-    }
-}
-#search{
+#search {
     width: 80%;
     height: 80%;
     border: none;
@@ -109,29 +150,45 @@ form {
     outline: none;
 }
 
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
 
-#countdown {
-    position: fixed;
-    width: 70%;
-    max-width: 400px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
 }
-#clock1 div{
-    color: rgba(95, 223, 9, 0.801);
-    width: 20%;
+
+@keyframes traino {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50vw);
+    }
+
+    55% {
+        transform: translateX(53vw) translateY(-50px) rotate(-45deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(120vw) translateY(-70vw) rotate(-45deg);
+        opacity: 0;
+    }
 }
-#clock1 span{
-    color: rgba(255, 255, 255, 0.425);
-    font-size: 1.8rem;
-} 
-#clock1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.8rem;
+
+@keyframes dissapear {
+    0% {}
+
+    100% {
+        width: 0;
+        margin-left: 100%;
+    }
 }
