@@ -13,8 +13,7 @@ Clement Caton Last update : 18/11/22
 - [Marketing plan](#marketing-plan)
 - [The final product](#the-final-product)
 
-
-## Requirements.
+## Requirements
 
 ### Functional requirements
 
@@ -30,44 +29,73 @@ Clement Caton Last update : 18/11/22
 
 ## Personae
 
-<img src="./thispersondoesnotexist/dev2.jpg" alt="drawing" width="200"/><br>
-Name: Marc<br>
-Age: 22<br>
-Education: Master's degree in computer science<br>
-Background: Student<br>
-Skills: Good knowledge of computer science<br>
-Geography: France<br>
-Platform: Web Desktop, weeks before christmas<br>
-Goal: Find out when Santa will arrive<br>
-Motivation: I want to know why this website exists<br>
-Pain points or frustrations: I don't like to sign up to a service<br>
+### Marc
 
-<img src="./thispersondoesnotexist/kid.jpg" alt="drawing" width="200"/><br>
-Name: Lisa<br>
-Age: 8<br>
-Education: None<br>
-Background: Child<br>
-Skills: Knows of the existance of Santa<br>
-Geography: UK<br>
-Platform: Web Ipad the night of christmas<br>
-Goal: Find out when Santa will arrive<br>
-Motivation: Embush Santa to prank him<br>
-Pain points or frustrations: I don't can't navigate interfaces that are not clear<br>
+[<img src="./thispersondoesnotexist/dev2.jpg" width="250"/>](./thispersondoesnotexist/dev2.jpg)
 
-<img src="./thispersondoesnotexist/old.jpg" alt="drawing" width="200"/><br>
-Name: James<br>
-Age: 65<br>
-Education: Right's degree<br>
-Background: Retired<br>
-Skills: Knows how to navigate a web page as long as it's not too hard<br>
-Geography: USA<br>
-Platform: Web Desktop 1 or 2 days before christmas<br>
-Goal: Show to his grandsons when Santa will arrive<br>
-Motivation: I want to see the exitment in my grandsons' eyes<br>
-Pain points or frustrations: I can't navigate if the interface is using dark patterns, or if I have 5 pages to navigate through in order to have the result.<br>
+Age: 22
 
+Education: Master's degree in computer science
 
-## Objectives.
+Background: Student
+
+Skills: Good knowledge of computer science
+
+Geography: France
+
+Platform: Web Desktop, weeks before christmas
+
+Goal: Find out when Santa will arrive
+
+Motivation: I want to know why this website exists
+
+Pain points or frustrations: I don't like to sign up to a service
+
+### Lisa
+
+[<img src="./thispersondoesnotexist/kid.jpg" width="250"/>](./thispersondoesnotexist/kid.jpg)
+
+Age: 8
+
+Education: None
+
+Background: Child
+
+Skills: Knows of the existance of Santa
+
+Geography: UK
+
+Platform: Web Ipad the night of christmas
+
+Goal: Find out when Santa will arrive
+
+Motivation: Embush Santa to prank him
+
+Pain points or frustrations: I don't can't navigate interfaces that are not clear
+
+### James
+
+[<img src="./thispersondoesnotexist/old.jpg" width="250"/>](./thispersondoesnotexist/old.jpg)
+
+Age: 65
+
+Education: Right's degree
+
+Background: Retired
+
+Skills: Knows how to navigate a web page as long as it's not too hard
+
+Geography: USA
+
+Platform: Web Desktop 1 or 2 days before christmas
+
+Goal: Show to his grandsons when Santa will arrive
+
+Motivation: I want to see the exitment in my grandsons' eyes
+
+Pain points or frustrations: I can't navigate if the interface is using dark patterns, or if I have 5 pages to navigate through in order to have the result.
+
+## Objectives
 
 It will be a single web page with an input field. The user will be able to enter a postal address or a coordinate and the page will show the time for Santa to arrive on the page.
 
@@ -77,15 +105,15 @@ It will be supported by the majority of current browsers OSs and devices.
 
 If the user accepts the use of his location, the service will use his coordinates to calculate the time for Santa to arrive. However, it will not disable the search bar in case he wants to see the time for another place.
 
-## User documentation.
+## User documentation
 
 Write your adress in the field. And press enter.
 
-## Test plan.
+## Test plan
 
 The test plan is written [here](./Quality_Assurance\TestPlan.md).
 
-## Marketing plan.
+## Marketing plan
 
 **HAVE TO BE VALIDATED WITH JEAN-PHILIPPE AND FRANCK**
 
@@ -112,14 +140,13 @@ The test plan is written [here](./Quality_Assurance\TestPlan.md).
 
 - [ ] Website displayed on the live of ALGOSC for the Telethon
 
-
 ### Will not be done
 
 We don't want to limit our users base to be in Vierzon. So we will not do any physical exposure in Vierzon.
 We prefer to keep it online and accessible to everyone.
 
-## The final product.
+## The final product
 
-The mockup of the final product is [here](https://www.figma.com/file/Ad1soWlxQlV1hWfGDLaSYx/noel?node-id=0%3A1&t=2pMa35mv3Z7G65o9-1).<br>
+The mockup of the final product is [here](https://www.figma.com/file/Ad1soWlxQlV1hWfGDLaSYx/noel?node-id=0%3A1&t=2pMa35mv3Z7G65o9-1).
+
 The final product can be found at [xmas.algosup.com](https://xmas.algosup.com/).
-
