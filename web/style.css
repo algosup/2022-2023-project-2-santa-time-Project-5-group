@@ -1,38 +1,114 @@
+body, h1 {
+    margin: 0;
+}
 body {
-    margin: 0;
-}
-
-#cesiumContainer {
-    width: 100vw;
     height: 100vh;
-    margin: 0;
+    width: 100vw;
+    /* background: rgb(23,19,93);
+    background: linear-gradient(36deg, rgba(23,19,93,1) 0%, rgba(31,31,85,1) 25%, rgba(71,50,111,1) 50%, rgba(46,8,77,1) 75%, rgba(48,0,103,1) 100%); */
+    background-image: url(ciel-etoile.jpg);
 }
 
-.cesium-viewer-animationContainer,
-.cesium-viewer-timelineContainer,
-.cesium-viewer-fullscreenContainer,
-.cesium-viewer-bottom,
-.cesium-sceneModePicker-wrapper,
-.cesium-home-button,
-.cesium-navigationHelpButton-wrapper,
-.cesium-button{
-    display: none !important;
-}
-.cesium-viewer-geocoderContainer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50vw;
     width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.cesium-viewer-geocoderContainer .cesium-geocoder-input, .cesium-viewer-geocoderContainer:hover .cesium-geocoder-input, .cesium-viewer-geocoderContainer:focus .cesium-geocoder-input, .cesium-viewer-geocoderContainer:active .cesium-geocoder-input, .cesium-viewer-geocoderContainer .cesium-geocoder-input:focus {
+.content h1 {
+    font-size: 12rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+    font-family: 'Dosis', sans-serif;
+    color: rgb(161, 161, 161);
+}
+#searchbar {
     width: 100%;
-    padding: 0 0 0 4px;
-    border-color:#aef;
-    box-shadow:0 0 8px #fff
+    height: 60px;
+    border: 2px solid #A1A1A1;
+    border-radius: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #272727;
+    opacity: 0.8;
 }
-.cesium-viewer-geocoderContainer{
-    max-width: calc(100% - 8px);
+.searchbar-start {
+    animation: 4s linear dissapear;
 }
+form {
+    width: 90%;
+}
+#searchbar:focus {
+    background-color: #7c7c7c;
+}
+.fiouuuuuuuuuuuuuu{
+    position: absolute;
+    height: 12%;
+    fill: #A1A1A1;
+    margin: 0 3%;
+    top: 84%;
+    left: 2.5%;
+    z-index: 999;
+}
+.search-spacer{
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 3% 0 0;
+}
+.fiou-start{
+    animation: 8s linear traino;
+}
+.fiou-end{
+    transform: translateX(1000px);
+}
+
+@keyframes traino {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50vw);
+    }
+    55% {
+        transform: translateX(53vw) translateY(-50px) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(120vw) translateY(-70vw) rotate(-45deg);
+        opacity: 0;
+    }
+}
+@keyframes dissapear {
+    0% {
+    }
+    100% {
+        width: 0;
+        margin-left: 100%;
+    }
+}
+#search{
+    width: 80%;
+    height: 80%;
+    border: none;
+    background-color: transparent;
+    color: #808080;
+    font-size: 28px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    outline: none;
+}
+
 
 #countdown {
     position: fixed;

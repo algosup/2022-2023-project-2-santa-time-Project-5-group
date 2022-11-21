@@ -1,11 +1,12 @@
 // class to create a countdown timer
 class CountdownTimer {
     // setup timer values
-    constructor({ selector, targetDate, backgroundColor = null, foregroundColor = null }) {
+    constructor({ selector, targetDate, backgroundColor = null, foregroundColor = null, offset = 0 }) {
         this.selector = selector;
         this.targetDate = targetDate;
         this.backgroundColor = backgroundColor;
         this.foregroundColor = foregroundColor;
+        this.offset = offset;
 
         // grab divs on frontend using supplied selector ID
         this.refs = {
@@ -18,7 +19,7 @@ class CountdownTimer {
 
     getTimeRemaining(endtime) {
         const current = new Date();
-        const currentModifier = Date.parse(current) + 3600000; // 3 600 000 = 60 minutes
+        const currentModifier = Date.parse(current) + 3600000 + this.offset; // 3 600 000 = 60 minutes
         const t = new Date(currentModifier);
         const total = Date.parse(endtime) - Date.parse(t);
         console.log(total);
