@@ -54,5 +54,6 @@ Issues have to respect the **Template** that is provided on Github.
 
 # Documentation
 
-| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
+| **Test** | **Status** | **Description** | **Result** | **Test Date** | **Tested By** | **Issue Link** | **Regression Test** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 01 | <ul> <li><span style="color:orange; font-weight:bold">Changes Requested</span></li> </ul> | Changes requested in the Functionnal, more details requested | Waiting for Changements | 2022 - 21 - 11| Guillaume Riviere | [Link to Pull Request](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/pull/4) | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> </ul> |
