@@ -1,6 +1,6 @@
 # Functional Specification
 
-Clement Caton Last update : 18/11/22
+Clement Caton Last update : 25/11/22
 
 ## Summary
 
