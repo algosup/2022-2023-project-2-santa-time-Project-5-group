@@ -21,7 +21,7 @@
         x = setInterval(function () {
 
             const now = new Date().getTime(),
-                distance = countDown - now;
+                distance = countDown - now + (10*offset);
 
             document.getElementById("days").innerText = Math.floor(distance / (day)),
                 document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
