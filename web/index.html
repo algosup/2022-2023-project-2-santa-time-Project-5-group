@@ -44,6 +44,26 @@
     <script src="./js/countdown.js"></script>
     <script src="./js/animation.js"></script>
 
+    <script>
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+    function onSuccess(position) {
+        const {
+            latitude,
+            longitude
+        } = position.coords;
+
+        console.log(`Your location: (${latitude},${longitude})`);
+    }
+
+    // handle error case
+    function onError() {
+        console.log('error');
+    }
+
+
+    </script>
+
     
 </body>
 
