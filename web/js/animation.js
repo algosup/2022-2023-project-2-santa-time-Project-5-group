@@ -2,13 +2,13 @@ addEventListener('submit', (event) => {
     event.preventDefault();
     Geoco(document.getElementById('search').value);
     const fiou = document.querySelector('#fiou');
-    const searchbar = document.querySelector('#searchbar');
     const content = document.querySelector('#title');
     const containerCountdown = document.querySelector('#container-countdown');
-    console.log('content');
 
     fiou.classList.add('fiou-start');
-    searchbar.classList.add('searchbar-start');
+    fiou.addEventListener('animationend', () => {
+        fiou.classList.remove('fiou-start');
+    });
 
     content.classList.add('hidden');
     containerCountdown.classList.remove('hidden')

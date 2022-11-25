@@ -1,5 +1,6 @@
 :root {
     --smaller: .75;
+    --anim: 6s;
 }
 
 * {
@@ -11,6 +12,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
@@ -68,7 +70,6 @@ li span {
 }
 
 .content h1 {
-    font-size: 12rem;
     font-weight: 400;
     text-align: center;
     margin-bottom: 20px;
@@ -76,13 +77,22 @@ li span {
     color: rgb(161, 161, 161);
 }
 
+@media only screen and (min-width: 990px) {
+    .content h1 {
+        font-size: 12vw;
+    }
+}
+@media screen and (max-width: 990px) {
+    .content h1 {
+        font-size: 18vw;
+    }
+}
+
 .fiouuuuuuuuuuuuuu {
-    position: absolute;
-    height: 12%;
+    height: 85%;
+    aspect-ratio: 1/1;
     fill: #A1A1A1;
-    margin: 0 3%;
-    top: 84%;
-    left: 2.5%;
+    margin: 0 1vw 0 1.5vw;
     z-index: 999;
 }
 
@@ -93,16 +103,16 @@ li span {
 }
 
 .fiou-start {
-    animation: 8s linear traino;
+    animation: var(--anim) linear traino;
 }
 
 .fiou-end {
     transform: translateX(1000px);
 }
 
-.searchbar-start {
+/* .searchbar-start {
     animation: 4s linear dissapear;
-}
+} */
 
 .container-countdown {
     color: #808080;
@@ -122,7 +132,8 @@ li span {
 /* ------------------------------ classList END ----------------------------- */
 
 #searchbar {
-    width: 100%;
+    width: 80vw;
+    max-width: 700px;
     height: 60px;
     border: 2px solid #A1A1A1;
     border-radius: 50px;
@@ -165,22 +176,17 @@ li span {
 }
 
 @keyframes traino {
-    0% {
-        transform: translateX(0);
+    40% {
+        transform: translateX(40vw);
     }
-
-    50% {
-        transform: translateX(50vw);
+    66% {
+        transform: translateX(80vw) translateY(-15vw) rotate(-25deg) ;
     }
-
-    55% {
-        transform: translateX(53vw) translateY(-50px) rotate(-45deg);
-        opacity: 1;
+    66.1% {
+        transform: translateX(-80vw) translateY(-15vw) rotate(25deg) ;
     }
-
     100% {
-        transform: translateX(120vw) translateY(-70vw) rotate(-45deg);
-        opacity: 0;
+        transform: translateX(0vw) translateY(0vw) rotate(0deg) ;
     }
 }
 
