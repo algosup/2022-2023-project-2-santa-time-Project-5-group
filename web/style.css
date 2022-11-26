@@ -4,7 +4,6 @@
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -21,6 +20,7 @@ body {
     /* background: rgb(23,19,93);
     background: linear-gradient(36deg, rgba(23,19,93,1) 0%, rgba(31,31,85,1) 25%, rgba(71,50,111,1) 50%, rgba(46,8,77,1) 75%, rgba(48,0,103,1) 100%); */
     background-image: url(ciel-etoile.jpg);
+    background-size: cover;
     align-items: center;
     background-color: #ffd54f;
     display: flex;
