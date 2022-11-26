@@ -13,6 +13,9 @@ gps.addEventListener("click", (event) => {
 
         console.log(`Your location: (${latitude},${longitude})`);
         offset = (longitude / 0.0041667) * 100;
+
+        // Animation Trigger 
+        AnimationTrigger();
     }
 
     // handle error case
