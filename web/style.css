@@ -95,6 +95,14 @@ li span {
     margin: 0 1vw 0 1.5vw;
     z-index: 999;
 }
+#gps {
+    height: 85%;
+    aspect-ratio: 1/1;
+    fill: #A1A1A1;
+    margin: 0 1vw 0 1.5vw;
+    z-index: 998;
+    cursor: pointer;
+}
 
 .search-spacer {
     height: 100%;
