@@ -21,7 +21,7 @@ GPS location is a system that uses satellites to determine the precise location 
 
 Postal address is a unique combination of numbers and letters that identifies a specific location.
 
-Coodrinates are a set of numbers that identify a specific location on the Earth.
+Coordinates are a set of numbers that identify a specific location on the Earth.
 
 API is an application programming interface that allows two software programs to communicate with each other.
 
@@ -121,7 +121,8 @@ If the user accepts the use of his location, the service will use his coordinate
 
 ## User documentation
 
-Write your adress in the field. And press enter.
+Write your adress in the field and press enter. Or press the geolocalisation icon and allow it's use.
+If you're a mac user, you need to allow it's use in the mac settings about the browser.
 
 ## Test plan
 
