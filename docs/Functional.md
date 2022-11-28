@@ -123,6 +123,7 @@ If the user accepts the use of his location, the service will use his coordinate
 
 Write your adress in the field and press enter. Or press the geolocalisation icon and allow it's use.
 If you're a mac user, you need to allow it's use in the mac settings about the browser.
+You need internet.
 
 ## Test plan
 
