@@ -126,7 +126,8 @@ li span {
     color: #808080;
     margin: 0 auto;
     text-align: center;
-    margin-top: -19%;
+    margin-top: -12vh;
+    margin-bottom: 10vh;
 }
 
 /* ----------------------------- classList START ---------------------------- */
