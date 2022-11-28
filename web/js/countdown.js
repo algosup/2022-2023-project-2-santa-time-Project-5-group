@@ -9,7 +9,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "12/24/",
+        dayMonth = "12/25/",
         xmas = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
