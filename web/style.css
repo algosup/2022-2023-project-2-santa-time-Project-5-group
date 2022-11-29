@@ -13,6 +13,7 @@ html, body {
     margin: 0;
     overflow: hidden;
 }
+
 #opaque {
     position: absolute;
     top: 0;
@@ -22,6 +23,7 @@ html, body {
     background: rgb(0, 0, 0);
     opacity: 0.15;
 }
+
 body {
     height: 100vh;
     width: 100vw;
@@ -91,6 +93,7 @@ li span {
         font-size: 12vw;
     }
 }
+
 @media screen and (max-width: 990px) {
     .content h1 {
         font-size: 18vw;
@@ -104,6 +107,7 @@ li span {
     margin: 0 1vw 0 1.5vw;
     z-index: 999;
 }
+
 #gps {
     height: 85%;
     aspect-ratio: 1/1;
@@ -147,6 +151,7 @@ li span {
 .reveal {
     visibility: visible;
 }
+
 /* ------------------------------ classList END ----------------------------- */
 
 #searchbar {
@@ -193,18 +198,31 @@ li span {
     }
 }
 
+@media (min-width: 600px) and (max-width: 1325px) and (orientation: landscape) {
+
+    
+    #searchbar{
+        position: fixed;
+        top: 92%;
+    }
+
+}
+
 @keyframes traino {
     40% {
         transform: translateX(40vw);
     }
+
     66% {
-        transform: translateX(80vw) translateY(-15vw) rotate(-25deg) ;
+        transform: translateX(80vw) translateY(-15vw) rotate(-25deg);
     }
+
     66.1% {
-        transform: translateX(-80vw) translateY(-15vw) rotate(25deg) ;
+        transform: translateX(-80vw) translateY(-15vw) rotate(25deg);
     }
+
     100% {
-        transform: translateX(0vw) translateY(0vw) rotate(0deg) ;
+        transform: translateX(0vw) translateY(0vw) rotate(0deg);
     }
 }
 
