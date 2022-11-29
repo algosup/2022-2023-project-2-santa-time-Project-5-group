@@ -83,9 +83,9 @@ li span {
 .content h1 {
     font-weight: 400;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     letter-spacing: 10px;
-    color: rgb(161, 161, 161);
+    color: #D8CDCD;
 }
 
 @media only screen and (min-width: 990px) {
@@ -131,16 +131,11 @@ li span {
     transform: translateX(1000px);
 }
 
-/* .searchbar-start {
-    animation: 4s linear dissapear;
-} */
-
 .container-countdown {
-    color: #808080;
+    color: white;
     margin: 0 auto;
     text-align: center;
-    margin-top: -12vh;
-    margin-bottom: 10vh;
+    margin-bottom: 25vh;
 }
 
 /* ----------------------------- classList START ---------------------------- */
@@ -158,14 +153,14 @@ li span {
     width: 80vw;
     max-width: 700px;
     height: 60px;
-    border: 2px solid #A1A1A1;
+    border: 2px solid black;
     border-radius: 50px;
     font-size: 20px;
     display: flex;
     align-items: center;
     flex-direction: row;
-    background-color: #272727;
-    opacity: 0.8;
+    background-color: #7A8DCB;
+    /* opacity: 0.8; */
 }
 
 #searchbar:focus {
