@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mynginx-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: mynginx
+  ports:
+  - port: 80
+    targetPort: 80
+
+# kubectl apply -f nginx-service.yml
+# kube delete service mynginx-service
