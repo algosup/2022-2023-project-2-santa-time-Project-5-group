@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xmas
+spec:
+  selector:
+    matchLabels:
+      app: xmas
+  template:
+    metadata:
+      labels:
+        app: xmas
+    spec:
+      containers:
+      - name: xmas
+        image: xmas:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+
+# kubectl apply -f nginx-deploy.yml
+# kubectl delete deployment xmas
