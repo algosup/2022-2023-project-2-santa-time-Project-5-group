@@ -9,10 +9,10 @@ env:
     AZURE_CONTAINER_REGISTRY: acrworkflow1669718388591
     CLUSTER_NAME: SantaKubernetes
     CLUSTER_RESOURCE_GROUP: prj5
-    CONTAINER_NAME: image-workflow-1669718388591
+    CONTAINER_NAME: xmas-image
     DEPLOYMENT_MANIFEST_PATH: |
-        ./xmas-deploy.yml
-        ./xmas-service.yml
+        ./.k8s/xmas-deploy.yml
+        ./.k8s/xmas-service.yml
 jobs:
     buildImage:
         permissions:
