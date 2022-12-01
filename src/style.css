@@ -22,6 +22,7 @@ html, body {
     height: 100vh;
     background: rgb(0, 0, 0);
     opacity: 0.15;
+    display: none;
 }
 
 body {
@@ -64,6 +65,19 @@ li {
 li span {
     display: block;
     font-size: 4.5rem;
+}
+
+.legal-notice {
+    word-spacing: 3px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: small;
+    color: black;
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+
 }
 
 .content {
@@ -195,8 +209,8 @@ li span {
 
 @media (min-width: 600px) and (max-width: 1325px) and (orientation: landscape) {
 
-    
-    #searchbar{
+
+    #searchbar {
         position: fixed;
         top: 92%;
     }
