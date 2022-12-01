@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="deer.css">
     <script>
         let offset = 0;
+        let cookie = false;
     </script>
 </head>
 
 <body>
+    <div class="temp-bg"></div>
     <div id="main">
         <div id="opaque"></div>
         <div class="content">
@@ -155,7 +157,7 @@
 
 <!-- Popup Legal -->
     
-    <div class="popup" id="popup">
+    <div class="popup popup-in" id="popup">
         <h1>We use cookies</h1>
         <p>We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from.</p>
         <div id="cookie">
@@ -167,6 +169,7 @@
                     
 <!-- Javascript Declarations -->
 
+    <script src="./js/cookie.js"></script>
     <script src="./js/request.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/countdown.js"></script>
