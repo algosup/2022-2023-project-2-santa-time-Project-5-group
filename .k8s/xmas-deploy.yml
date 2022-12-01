@@ -17,8 +17,12 @@ spec:
       - name: xmas
         image: xmasimages.azurecr.io/xmas-image:latest
         resources:
+        # Requests and limits are mendatory for AKS
+          requests:
+            cpu: 125m
+            memory: 32Mi
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            cpu: 500m
+            memory: 128Mi
         ports:
         - containerPort: 80
