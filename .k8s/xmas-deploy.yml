@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: xmas
-        image: xmas-image:latest
+        image: xmasimages.azurecr.io/xmas-image:latest
         resources:
           limits:
             memory: "128Mi"
