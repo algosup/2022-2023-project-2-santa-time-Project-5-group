@@ -15,4 +15,5 @@ COPY ./src ./usr/share/nginx/html
 
 EXPOSE 80
 
-CMD ["certbot", "--nginx", "--non-interactive", "--agree-tos", "--domains", "xmas.algosup.com", "--email", "franck.jeannin@algosup.com", ";", "nginx", "-g", "daemon off;" ]
+#ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;", "certbot", "--nginx", "--non-interactive", "--agree-tos", "--domains", "xmas.algosup.com", "--email", "franck.jeannin@algosup.com;"]
