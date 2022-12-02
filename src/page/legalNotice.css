@@ -31,13 +31,18 @@ div {
     padding: 2%;
 }
 
+a {
+    color: #2E2E2E;
+}
+
 .container {
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #D8CDCD;
+    background-color: #ebd9d9;
     width: 75%;
-
+    border: 1px solid #2E2E2E;
+    border-radius: 8px;
 }
