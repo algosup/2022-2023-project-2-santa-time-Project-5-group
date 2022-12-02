@@ -42,11 +42,10 @@ html, body {
     }
 }
 
-h1 {
+#title {
     font-weight: normal;
     letter-spacing: .125rem;
     text-transform: uppercase;
-    margin: 0;
 }
 
 form {
@@ -168,18 +167,22 @@ li span {
     justify-content: space-between;
     font-family: 'Dosis', sans-serif;
 }
+
 .popup-in {
     animation: forwards 1.5s ease-out popup;
 }
+
 .popup-out {
     animation: 1.5s ease-out popupout reverse;
 }
+
 .popup h1 {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0;
     text-align: center;
 }
+
 .popup p {
     color: #444444;
     font-size: 0.8rem;
@@ -187,6 +190,7 @@ li span {
     text-align: center;
     width: 100%;
 }
+
 #cookie {
     width: 100%;
     display: flex;
@@ -194,6 +198,7 @@ li span {
     align-items: center;
 
 }
+
 .popup button {
     font-size: 1.1rem;
     margin: 0 auto;
@@ -202,17 +207,21 @@ li span {
     cursor: pointer;
     border: none;
 }
+
 #accept:hover {
     background: #1dd90cab;
 }
+
 #refuse:hover {
     background: #d91d1dab;
 }
+
 @keyframes popup {
     100% {
         bottom: 2vh;
     }
 }
+
 @keyframes popupout {
     100% {
         transform: translateY(150vh);
@@ -273,6 +282,7 @@ li span {
     }
     
 }
+
 @media all and (max-width: 990px) {
     .popup {
         width: 45vw;
@@ -289,7 +299,6 @@ li span {
         font-size: 2rem;
     }
 }
-
 
 @media (min-width: 600px) and (max-width: 1325px) and (orientation: landscape) {
 
