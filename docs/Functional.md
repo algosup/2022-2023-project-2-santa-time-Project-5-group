@@ -1,6 +1,6 @@
 # Functional Specification
 
-Clement Caton Last update : 18/11/22
+Clement Caton Last update : 25/11/22
 
 ## Summary
 
@@ -12,6 +12,20 @@ Clement Caton Last update : 18/11/22
 - [Test plan](#test-plan)
 - [Marketing plan](#marketing-plan)
 - [The final product](#the-final-product)
+
+## Glossary
+
+Christmas is a religious holiday celebrated by Christians on December 25. It is a time for family and friends to get together and exchange gifts. It is also a time for people to give to those less fortunate.
+
+GPS location is a system that uses satellites to determine the precise location of a device on the Earth.
+
+Postal address is a unique combination of numbers and letters that identifies a specific location.
+
+Coordinates are a set of numbers that identify a specific location on the Earth.
+
+API is an application programming interface that allows two software programs to communicate with each other.
+
+Web desktop is a web browser application, as opposed to a CLI application.
 
 ## Requirements
 
@@ -107,7 +121,9 @@ If the user accepts the use of his location, the service will use his coordinate
 
 ## User documentation
 
-Write your adress in the field. And press enter.
+Write your adress in the field and press enter. Or press the geolocalisation icon and allow it's use.
+If you're a mac user, you need to allow it's use in the mac settings about the browser.
+You need internet.
 
 ## Test plan
 
