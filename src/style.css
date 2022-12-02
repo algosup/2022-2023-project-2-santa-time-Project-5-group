@@ -126,17 +126,26 @@ li span {
     font-size: 4.5rem;
 }
 
-.legal-notice {
-    word-spacing: 3px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: small;
-    color: black;
+#footer-notice {
     position: absolute;
     bottom: 3%;
     width: 100%;
     text-align: center;
-    text-decoration: none;
+}
 
+.text-notice {
+    font-family: 'Quicksand', sans-serif;
+    font-size: small;
+    color: white;
+    text-decoration: none;
+}
+
+.text-notice:hover {
+    color: #ffd54f;
+}
+
+.text-notice:nth-last-child(1) {
+    margin-left: 3em;
 }
 
 .content {
