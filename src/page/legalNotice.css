@@ -1,3 +1,43 @@
-*{
-    background-color: pink;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rme = 10px */
+
+}
+
+body {
+    font-size: 1.4rem;
+    /* 14px */
+    font-family: arial;
+    color: black;
+    background: linear-gradient(180deg, rgba(131, 124, 180, 1) 0%, rgba(255, 219, 220, 1) 63%, rgba(254, 252, 252, 1) 96%);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+
+}
+
+div {
+    padding: 2%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D8CDCD;
+    width: 75%;
+
 }
