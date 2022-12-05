@@ -1,6 +1,21 @@
 :root {
     --smaller: .75;
     --anim: 6s;
+
+    --accept_bg: #3CB371CC;
+    --reject_bg: #DC143CCC;
+    --accept_color: #3CB371;
+    --reject_color: #DC143C;
+
+    --title_color: #ffffff;
+    --font_color: #444444;
+    --font_dark_color: #222222;
+
+    --bg_element: #ffffff;
+    --bg_element_focus: #f5f5f5;
+
+
+
 }
 
 * {
@@ -97,7 +112,7 @@ li span {
     text-align: center;
     margin-bottom: 60px;
     letter-spacing: 10px;
-    color: #fcf3f3;
+    color: var(--title_color);
 }
 
 @media only screen and (min-width: 990px) {
@@ -115,7 +130,7 @@ li span {
 .fiouuuuuuuuuuuuuu {
     height: 85%;
     aspect-ratio: 1/1;
-    fill: #444444;
+    fill: var(--font_color);
     margin: 0 1vw 0 1.5vw;
     z-index: 999;
 }
@@ -123,7 +138,7 @@ li span {
 #gps {
     height: 85%;
     aspect-ratio: 1/1;
-    fill: #444444;
+    fill: var(--font_color);
     margin: 0 1vw 0 1.5vw;
     z-index: 998;
     cursor: pointer;
@@ -144,7 +159,7 @@ li span {
 }
 
 .container-countdown {
-    color: white;
+    color: var(--title_color);
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25vh;
@@ -155,10 +170,10 @@ li span {
     bottom: -35vh;
     right: 5vw;
     width: 25vw;
-    height: 20vh;
+    /* height: 20vh; */
     padding: 15px;
     border-radius: 15px;
-    background: rgb(190, 190, 190);
+    background: var(--bg_element);
     opacity: 0.95;
     z-index: 999;
     display: flex;
@@ -180,7 +195,7 @@ li span {
 }
 
 .popup p {
-    color: #444444;
+    color: var(--font_color);
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
@@ -206,11 +221,11 @@ li span {
 }
 
 #accept:hover {
-    background: rgba(60, 179, 114, 80);
+    background: var(--accept_bg);
 }
 
 #refuse:hover {
-    background: rgba(220, 20, 60, 80);
+    background: var(--reject_bg);
 }
 
 @keyframes popup {
@@ -240,12 +255,12 @@ li span {
     display: flex;
     align-items: center;
     flex-direction: row;
-    background-color: grey;
+    background-color: var(--bg_element);
     /* opacity: 0.8; */
 }
 
 #searchbar:focus {
-    background-color: #7c7c7c;
+    background-color: var(--bg_element_focus);
 }
 
 #search {
@@ -253,7 +268,7 @@ li span {
     height: 80%;
     border: none;
     background-color: transparent;
-    color: #131313;
+    color: var(--font_dark_color);
     font-size: 28px;
     font-family: 'Dosis', sans-serif;
     font-weight: 400;
@@ -298,19 +313,34 @@ li span {
         padding: 15px;
     }
     .popup h2 {
-        font-size: 1.8rem;
-    }
-    .popup p{
-        font-size: 1.4rem;
-    }
-    .popup button {
         font-size: 1.6rem;
     }
+    .popup p{
+        font-size: 1.2rem;
+    }
+    .popup button {
+        font-size: 1.4rem;
+    }
     #accept {
-        color: #3cb372;
+        color: var(--accept_color);
     }
     #refuse {
-        color: crimson;
+        color: var(--reject_color);
+    }
+    .fiouuuuuuuuuuuuuu {
+        height: 85%;
+        aspect-ratio: 1/1;
+        fill: var(--font_color);
+        margin: 0 1vw 0 3vw;
+        z-index: 999;
+    }
+    .gps {
+        height: 85%;
+        aspect-ratio: 1/1;
+        fill: var(--font_color);
+        margin: 0 3vw 0 3vw;
+        z-index: 998;
+        cursor: pointer;
     }
 }
 

@@ -1,6 +1,7 @@
 let acceptCookie = document.querySelector('#accept');
 let refuseCookie = document.querySelector('#refuse');
 let popup = document.querySelector('#popup');
+let search = document.querySelector('#search');
 
 // EVENTS
 // alert (ReadCookie('cookie'));
@@ -8,8 +9,11 @@ let popup = document.querySelector('#popup');
 if (ReadCookie('cookie') == "true") {
     popup.style.display = "none";
     cookie = true;
-    if (ReadCookie('adress') != "") {
-        Geoco(ReadCookie('adress'));
+    if (ReadCookie('address') != "") {
+        search.value = ReadCookie('address');
+        Geoco(ReadCookie('address'));
+        console.log(ReadCookie('address'));
+        AnimationTrigger();
     }
 } else {
     acceptCookie.addEventListener('click', function() {
