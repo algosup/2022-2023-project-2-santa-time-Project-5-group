@@ -7,7 +7,7 @@ COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 RUN nginx -c /etc/nginx/nginx.conf
 
 # reload nginx
-RUN /etc/init.d/nginx reload
+#RUN /etc/init.d/nginx start
 
 # Install certbot
 
