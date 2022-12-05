@@ -86,7 +86,7 @@ The website will be deployed on an nginx server. The nginx server will take care
 
 ### **Database**
 
-For our database, we will use the data from [geofabrik](http://download.geofabrik.de). This dataset is quite heavy but it allows us to have a great precision, and it has also regular updates. The data will be stored in a photon database. Photon will allow us to store our data as we wnat and is better when dealing with huge amount of data.
+For our database, we will use the data from [geofabrik](http://download.geofabrik.de). This dataset is quite heavy but it allows us to have a great precision, and it has also regular updates. The data will be stored in a photon database. Photon will allow us to store our data as we want and is better when dealing with huge amount of data.
 In the case where this database is not fast enough or if its manipulation is too complicated, we could use data from this [dataset](http://www.geonames.org). This dataset is less precise because it only take in account the city and not the complete adress, but it is less heavier and easier to manipulate than the data from openstreetmap.
 The database will store:
 
