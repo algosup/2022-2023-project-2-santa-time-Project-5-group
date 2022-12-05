@@ -12,7 +12,8 @@ html {
 }
 
 body {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    width: 100vw;
     /* 14px */
     font-family: arial;
     color: #2E2E2E;
@@ -35,9 +36,8 @@ a {
 }
 
 .container {
-    height: 100%;
-    display: flex-start;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     background-color: #ebd9d9;
@@ -50,8 +50,4 @@ a {
 .back {
     padding-right: 94%;
     font-size: 210%;
-}
-
-.back:hover {
-    color: #ffd54f;
 }
