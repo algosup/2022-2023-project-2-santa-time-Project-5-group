@@ -3,8 +3,8 @@ FROM nginx:1.23
 RUN apt-get update && apt-get upgrade -y
 
 
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-RUN nginx -c /etc/nginx/nginx.conf
+#COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+#RUN nginx -c /etc/nginx/nginx.conf
 
 # reload nginx
 #RUN /etc/init.d/nginx start
