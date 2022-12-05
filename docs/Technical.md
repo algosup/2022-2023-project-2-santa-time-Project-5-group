@@ -86,9 +86,12 @@ The website will be deployed on an nginx server. The nginx server will take care
 
 ### **Database**
 
-For our database, we will use the data from [geofabrik](http://download.geofabrik.de). This dataset is quite heavy but it allows us to have a great precision, and it has also regular updates. The data will be stored in a photon database. Photon will allow us to store our data as we want and is better when dealing with huge amount of data.
-In the case where this database is not fast enough or if its manipulation is too complicated, we could use data from this [dataset](http://www.geonames.org). This dataset is less precise because it only take in account the city and not the complete adress, but it is less heavier and easier to manipulate than the data from openstreetmap.
-The database will store:
+For our database, we will use the data from [geofabrik](http://download.geofabrik.de). This dataset is quite heavy but it allows us to have a great precision, and it has also regular updates. The data will be stored in a photon database. Photon will allow us to store our data as we want and photon is better when dealing with huge amount of data.
+
+The database is created thanks to an Azure virtual machine. We will be able to connect to the database through ssh http and hhtps request. A 256 GB disk is used to store the data. We use a 256 GB disk because a 128 GB could have been too small to store data.
+Thanks to the database, we will not be rate limited, that could have happened if we used an external API.
+
+The database will store the following the data:
 
 - The adress
 - The postal code
@@ -129,6 +132,7 @@ The database will store:
 
 | Errors | Meanings |
 | ------ | -------- |
+| "You didn't typed an adress" | No adress where typed in the field |
 | "It seems that the adress you typed is wrong. You may have done a mistake" | The adress is not typed in a valid format. The user needs to type it again |
 | "I can not find you. It seems you did not activite your localisation" | The user tried to use the geolocalisation feature but he did not allow his browser to have access to his localisation. If the user is on MAC, he also needs to allows the acces to the localisation in the privacy's settings |
 | | |
