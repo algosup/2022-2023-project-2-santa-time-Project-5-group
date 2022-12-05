@@ -3,8 +3,10 @@ FROM nginx:1.23
 RUN apt-get update && apt-get upgrade -y
 
 
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+# reload nginx
+RUN nginx -s reload
 
-#COPY ./nginx.conf /etc/nginx/nginx.conf
 # Install certbot
 
 RUN apt-get install -y certbot python3-certbot-nginx
