@@ -8,7 +8,7 @@ let popup = document.querySelector('#popup');
 if (ReadCookie('cookie') == "true") {
     popup.style.display = "none";
     cookie = true;
-    if (ReadCookie('adress') != "") {
+    if (ReadCookie('address') != "") {
         Geoco(ReadCookie('adress'));
     }
 } else {

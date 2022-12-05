@@ -155,7 +155,7 @@ li span {
     bottom: -35vh;
     right: 5vw;
     width: 25vw;
-    height: 20vh;
+    /* height: 20vh; */
     padding: 15px;
     border-radius: 15px;
     background: rgb(190, 190, 190);
@@ -298,13 +298,13 @@ li span {
         padding: 15px;
     }
     .popup h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     .popup p{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .popup button {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     #accept {
         color: #3cb372;
