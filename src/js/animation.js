@@ -4,7 +4,7 @@ addEventListener('submit', (event) => {
     Geoco(document.getElementById('search').value);
 
     if (ReadCookie('cookie') == "true") {
-        CreateCookie('adress', document.getElementById('search').value);
+        CreateCookie('address', document.getElementById('search').value);
     } 
 
     AnimationTrigger();
