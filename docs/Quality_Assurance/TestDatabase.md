@@ -23,9 +23,9 @@ This section will explain how to use this document.
 
 **Accepted terms**
 
-| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ID | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> <li><span style="color:red; font-weight:bold">ERROR</span></li> </ul> | Description | Description | <ul> <li>Windows XX</li> <li>Mac OS XX</li> <li>IOS XX</li> <li>Android XX</li> </ul> | <ul> <li>Firefox</li> <li>Chrome</li> <li>Safari</li> <li>Samsung Internet</li> </ul> | YY - DD - MM | Name | [LINK](www.google.com) | Description | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** | **Action taken** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ID | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> <li><span style="color:red; font-weight:bold">ERROR</span></li> </ul> | Description | Description | <ul> <li>Windows XX</li> <li>Mac OS XX</li> <li>IOS XX</li> <li>Android XX</li> </ul> | <ul> <li>Firefox</li> <li>Chrome</li> <li>Safari</li> <li>Samsung Internet</li> </ul> | YY - DD - MM | Name | [LINK](www.google.com) | Description | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> | Description |
 
 **How**
 
@@ -38,9 +38,9 @@ Issues have to respect the **Template** that is provided on Github.
 
 # Web Application
 
-| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
+| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Regression Test** | **Action taken** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
+| 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS after fix</span></ul> | When zooming out a white bar appear on the website | A white bar in the background that shouldn't be there | <ul> <li>Windows 11</li> <li>Mac OS 12</li></ul> | <ul> <li>Firefox</li> <li>Chrome</li></ul> | 2022 - 24 - 11 | Guillaume Riviere | / | <ul><li><span style="color:blue; font-weight:bold">NO</span></li> </ul> | The issue was fixed by removing a white pixel in the background image |
 
 # Server Application
 
