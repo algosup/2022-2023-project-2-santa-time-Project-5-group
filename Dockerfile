@@ -5,7 +5,7 @@ RUN apt-get update && apt-get upgrade -y
 
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 # reload nginx
-RUN nginx -s reload
+RUN sudo /etc/init.d/nginx reload
 
 # Install certbot
 
