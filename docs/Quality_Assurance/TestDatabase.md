@@ -6,7 +6,6 @@
 - [How to](#how-to)
 - [Web Application](#web-application)
 - [Server Application](#server-application)
-- [User Interface](#user-interface)
 - [Documentation](#documentation)
 
     
@@ -38,21 +37,40 @@ Issues have to respect the **Template** that is provided on Github.
 
 # Web Application
 
-| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Regression Test** | **Action taken** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Regression Test** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS after fix</span></ul> | When zooming out a white bar appear on the website | A white bar in the background that shouldn't be there | <ul> <li>Windows 11</li> <li>Mac OS 12</li></ul> | <ul> <li>Firefox</li> <li>Chrome</li></ul> | 2022 - 24 - 11 | Guillaume Riviere | / | <ul><li><span style="color:blue; font-weight:bold">NO</span></li> </ul> | The issue was fixed by removing a white pixel in the background image |
+| 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS after fix</span></li> </ul> | Cookie Text is should be readable | Text is readable on all device | Android 12 | Samsung Internet - Galaxy S10+ | 01/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 3 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Cookie Saving | Cookies are save correctly | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 4 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Cookie Pop up showing | Pop up appears correctly on page load | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 5 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Cookie pop up don't show if already accepted | The pop up isn't appearing if already accepted | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / |  <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 6 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Cookie Enter Adress in search Bar if exist | Adress is correctly placed in Search bar if it exist in cookies | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / |  <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 7 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Cookie Delete after 6 months | Cookies are deleted after 6 months | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 05/12/2022 | Guillaume Riviere | / |  <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 8 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Cookie Display timer if cookie exist | Timer appear on Page load | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 05/12/2022 | Guillaume Riviere | / |  <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 9 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Cookie Replace old adress if a new one is registered | Address is updated each times | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 05/12/2022 | Guillaume Riviere | / |  <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 10 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | GPS Clicking on GPS button should return correct position  | Output correct approximate location ( GPS precision ) | <ul> <li>Android 12</li><li>IOS 16</li><li>Windows 11</li></ul> | <ul> <li>Firefox</li><li>Chrome</li><li>Samsung Internet</li></ul> | 05/12/2022 | Guillaume Riviere | / |  <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 11 | <ul> <li><span style="color:red; font-weight:bold">ERROR</span></li> </ul> | GPS Clicking on GPS button should return correct position  | Return nothing, no errors | <ul> <li>MACOS 12</li></ul> | <ul><li>Safari</li><li>Chrome</li><li>Firefox</li></ul> | 05/12/2022 | Guillaume Riviere |  [LINK](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/issues/30) | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> </ul> |
+| 12 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Timer Real seconds  | Seconds are real seconds |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 05/12/2022 | Guillaume Riviere | / |  <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 13 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Timer Change on Adress Change | Timer is updated each time the address is updated |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 05/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 14 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Link Partners | Link partners link correctly to the page Partners |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 06/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 15 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Link Privacy | Link privacy link correctly to the page Privacy |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 06/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 16 | <ul> <li><span style="color:red; font-weight:bold">ERROR</span></li> </ul> | Link Privacy position | Link privacy go under the deer on small devices |  <ul> <li>Android 12</li><li>IOS 16</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 06/12/2022 | Guillaume Riviere | [LINK](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/issues/31) | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> </ul> |
+| 17 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Link Partners position | Link partners is visible at any times |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 06/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+
+
+
+
 
 # Server Application
 
-| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Test** | **Status** | **Description** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Calculation Time shift should be  | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
 
-# User Interface
-
-| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 # Documentation
 
-| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Test** | **Status** | **Description** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS after fix</span></li> </ul> | Functionnal is valid | 2022 - 28 - 11 | Guillaume Riviere | [LINK](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/pull/4) | / | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> </ul> |
+| 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS after fix</span></li> </ul> | Functionnal is valid | 2022 - 5 - 12 | Guillaume Riviere | [LINK](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/pull/7) | / | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> </ul> |
