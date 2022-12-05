@@ -4,6 +4,7 @@ metadata:
   name: xmas-service
   labels:
     app: xmas
+    uri: xmas.algosup.com
 spec:
   selector:
     app: xmas
