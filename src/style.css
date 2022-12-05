@@ -172,11 +172,7 @@ li span {
     animation: forwards 1.5s ease-out popup;
 }
 
-.popup-out {
-    animation: 1.5s ease-out popupout reverse;
-}
-
-.popup h1 {
+.popup h2 {
     font-size: 1.5rem;
     font-weight: 400;
     margin: 0;
@@ -185,7 +181,7 @@ li span {
 
 .popup p {
     color: #444444;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
     width: 100%;
@@ -193,6 +189,7 @@ li span {
 
 #cookie {
     width: 100%;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -200,7 +197,7 @@ li span {
 }
 
 .popup button {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 0 auto;
     padding: 5px 8px;
     border-radius: 7px;
@@ -209,11 +206,11 @@ li span {
 }
 
 #accept:hover {
-    background: #1dd90cab;
+    background: rgba(60, 179, 114, 80);
 }
 
 #refuse:hover {
-    background: #d91d1dab;
+    background: rgba(220, 20, 60, 80);
 }
 
 @keyframes popup {
@@ -222,11 +219,6 @@ li span {
     }
 }
 
-@keyframes popupout {
-    100% {
-        transform: translateY(150vh);
-    }
-}
 /* ----------------------------- classList START ---------------------------- */
 .hidden {
     visibility: hidden;
@@ -289,14 +281,36 @@ li span {
         height: 20vh;
         padding: 15px;
     }
-    .popup h1 {
+    .popup h2 {
         font-size: 1.8rem;
     }
     .popup p{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .popup button {
-        font-size: 2rem;
+        font-size: 1.6rem;
+    }
+}
+@media all and (max-width: 550px) {
+    .popup {
+        width: 80vw;
+        height: 20vh;
+        padding: 15px;
+    }
+    .popup h2 {
+        font-size: 1.8rem;
+    }
+    .popup p{
+        font-size: 1.4rem;
+    }
+    .popup button {
+        font-size: 1.6rem;
+    }
+    #accept {
+        color: #3cb372;
+    }
+    #refuse {
+        color: crimson;
     }
 }
 
@@ -325,14 +339,5 @@ li span {
 
     100% {
         transform: translateX(0vw) translateY(0vw) rotate(0deg);
-    }
-}
-
-@keyframes dissapear {
-    0% {}
-
-    100% {
-        width: 0;
-        margin-left: 100%;
     }
 }

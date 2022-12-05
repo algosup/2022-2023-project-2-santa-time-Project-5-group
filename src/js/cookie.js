@@ -15,7 +15,7 @@ if (ReadCookie('cookie') == "true") {
     acceptCookie.addEventListener('click', function() {
         popup.style.display = 'none';
         cookie = true;
-        CreateCookie('cookie', cookie, 365);
+        CreateCookie('cookie', cookie);
     });
     refuseCookie.addEventListener('click', function() {
         popup.style.display = 'none';

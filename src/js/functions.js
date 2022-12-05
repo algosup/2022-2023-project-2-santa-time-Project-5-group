@@ -15,7 +15,8 @@ function AnimationTrigger() {
 }
 
 // COOKIES
-function CreateCookie(key, value, days) {
+function CreateCookie(key, value) {
+    let days = 182; // 6 months
     let date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     let expires = "expires=" + date.toUTCString();
