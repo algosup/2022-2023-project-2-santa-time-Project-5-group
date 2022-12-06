@@ -83,12 +83,34 @@ li span {
 #footer-notice {
     position: absolute;
     bottom: 3%;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media all and (max-width: 450px) {
+    #footer-notice {
+        position: absolute;
+        bottom: 1%;
+        left: 65%;
+        transform: translateX(-50%);
+        width: 20%;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
 .text-notice {
     font-family: 'Quicksand', sans-serif;
+    margin-bottom: 5%;
     font-size: small;
     color: white;
     text-decoration: none;
@@ -96,10 +118,6 @@ li span {
 
 .text-notice:hover {
     color: #ffd54f;
-}
-
-.text-notice:nth-last-child(1) {
-    margin-left: 3em;
 }
 
 .content {
