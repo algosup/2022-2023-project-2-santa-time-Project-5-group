@@ -19,19 +19,19 @@
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(131,124,180,1) 0%, rgba(255,219,220,1) 63%, rgba(254,252,252,1) 96%);
+    background: linear-gradient(180deg, rgba(131, 124, 180, 1) 0%, rgba(255, 219, 220, 1) 63%, rgba(254, 252, 252, 1) 96%);
 }
 
 #main {
@@ -42,7 +42,7 @@ html, body {
     background-size: cover;
     background-position: center;
     align-items: center;
-    background-color: linear-gradient(180deg, rgba(131,124,180,1) 0%, rgba(255,219,220,1) 63%, rgba(254,252,252,1) 96%);
+    background-color: linear-gradient(180deg, rgba(131, 124, 180, 1) 0%, rgba(255, 219, 220, 1) 63%, rgba(254, 252, 252, 1) 96%);
     display: flex;
     font-family: 'Dosis', sans-serif;
     animation: forwards 1.5s ease-in-out backimage;
@@ -52,6 +52,7 @@ html, body {
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -124,6 +125,22 @@ li span {
     color: var(--title_color);
 }
 
+.instruction p {
+    color: var(--font_color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.instruction h2 {
+    color: var(--font_color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
 @media only screen and (min-width: 990px) {
     .content h1 {
         font-size: 12vw;
@@ -134,6 +151,26 @@ li span {
     .content h1 {
         font-size: 18vw;
     }
+}
+
+#instruction-box {
+    left: 50%;
+    top: 50%;
+    padding: 3%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    position: fixed;
+    border-radius: 15px;
+    /* background: var(--bg_element); */
+    opacity: 0.95;
+    font-family: 'Dosis', sans-serif;
+    z-index: 1;
+    /* animation: spin 2s linear infinite; */
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
 }
 
 .fiouuuuuuuuuuuuuu {
@@ -296,7 +333,7 @@ li span {
     li span {
         font-size: calc(3.375rem * var(--smaller));
     }
-    
+
 }
 
 @media all and (max-width: 990px) {
@@ -305,37 +342,47 @@ li span {
         height: 20vh;
         padding: 15px;
     }
+
     .popup h2 {
         font-size: 1.8rem;
     }
-    .popup p{
+
+    .popup p {
         font-size: 1.4rem;
     }
+
     .popup button {
         font-size: 1.6rem;
     }
 }
+
 @media all and (max-width: 550px) {
     .popup {
         width: 80vw;
         height: 20vh;
         padding: 15px;
     }
+
     .popup h2 {
         font-size: 1.6rem;
     }
-    .popup p{
+
+    .popup p {
         font-size: 1.2rem;
     }
+
     .popup button {
         font-size: 1.4rem;
     }
+
     #accept {
         color: var(--accept_color);
     }
+
     #refuse {
         color: var(--reject_color);
     }
+
     .fiouuuuuuuuuuuuuu {
         height: 85%;
         aspect-ratio: 1/1;
@@ -343,6 +390,7 @@ li span {
         margin: 0 1vw 0 3vw;
         z-index: 999;
     }
+
     .gps {
         height: 85%;
         aspect-ratio: 1/1;
