@@ -11,11 +11,6 @@ spec:
   selector:
     matchLabels:
       app: xmas
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 0
-      maxUnavailable: 1
   template:
     metadata:
       labels:
