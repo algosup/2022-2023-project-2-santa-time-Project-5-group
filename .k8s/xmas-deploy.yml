@@ -4,10 +4,18 @@ metadata:
   name: xmas-deployment
   labels:
     app: xmas
+    uri: xmas.algosup.com
 spec:
+  # ! Explicitly setting this field to 0, will result in cleaning up all the history of your Deployment thus that Deployment will not be able to roll back
+  #revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: xmas
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
   template:
     metadata:
       labels:
@@ -16,6 +24,7 @@ spec:
       containers:
       - name: xmas
         image: xmasimages.azurecr.io/xmas-image:latest
+        imagePullPolicy: Always
         resources:
         # Requests and limits are mendatory for AKS
           requests:
