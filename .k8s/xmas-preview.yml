@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xmas-preview
+  labels:
+    app: xmas
+spec:
+  # ! Explicitly setting this field to 0, will result in cleaning up all the history of your Deployment thus that Deployment will not be able to roll back
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: xmas
+  template:
+    metadata:
+      labels:
+        app: xmas
+    spec:
+      containers:
+      - name: xmas
+        image: xmasimages.azurecr.io/xmas-image-preview:latest
+        imagePullPolicy: Always
+        resources:
+        # Requests and limits are mendatory for AKS
+          requests:
+            cpu: 125m
+            memory: 32Mi
+          limits:
+            cpu: 500m
+            memory: 128Mi
+        ports:
+        - containerPort: 80

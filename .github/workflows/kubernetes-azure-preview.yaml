@@ -1,6 +1,6 @@
 name: kubernetes-azure-preview
 "on":
-    push:
+    pull_request:
         branches:
             - main
     workflow_dispatch: {}
@@ -11,7 +11,7 @@ env:
     CLUSTER_RESOURCE_GROUP: prj5
     CONTAINER_NAME: xmas-image-preview
     DEPLOYMENT_MANIFEST_PATH: |
-        ./.k8s/xmas-deploy.yml
+        ./.k8s/xmas-preview.yml
         ./.k8s/xmas-service.yml
 jobs:
     buildImage:
