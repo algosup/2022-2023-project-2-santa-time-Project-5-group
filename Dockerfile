@@ -6,7 +6,7 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /usr/local/apach
 
 COPY ./src/ /usr/local/apache2/htdocs/
 
-COPY ./apache2/httpd.conf /usr/local/apache2/conf/
+COPY ./apache/httpd.conf /usr/local/apache2/conf/
 
 EXPOSE 80
 EXPOSE 443
