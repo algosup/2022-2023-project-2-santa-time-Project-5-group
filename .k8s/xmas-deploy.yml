@@ -7,7 +7,7 @@ metadata:
     uri: xmas.algosup.com
 spec:
   # ! Explicitly setting this field to 0, will result in cleaning up all the history of your Deployment thus that Deployment will not be able to roll back
-  revisionHistoryLimit: 1
+  #revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: xmas
