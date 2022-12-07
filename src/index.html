@@ -16,13 +16,15 @@
 </head>
 
 <body onload="myFunction()" style="margin:0;">
-<!--  -->
+
+<!-- ------------------------------- CONTEXT ------------------------------- -->
     <div id="instruction-box">
         <div class="instruction">
         <h2>Welcome to XMAS</h2>
         <p>The christmas countdown to find out how long it will be before Santa comes</p>
             </div>
     </div>
+<!-- ----------------------------- CONTEXT END ----------------------------- -->
 
     <div style="display:none;" id="myDiv">
 
@@ -32,6 +34,7 @@
             <div class="content">
                 <h1 id="title">XMAS</h1>
 
+<!-- ------------------------------ SEARCHBAR ------------------------------ -->
                 <div id="searchbar">
                     <svg id="fiou" class="fiouuuuuuuuuuuuuu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                         <path
@@ -47,7 +50,9 @@
                     </svg>
                 </div>
             </div>
+<!-- ---------------------------- SEARCHBAR END ---------------------------- -->
 
+<!-- ------------------------------ COUNTDOWN ------------------------------ -->
             <div class="container-countdown hidden" id="container-countdown">
                 <h1 id="headline">Santa Claus' visit</h1>
                 <div id="countdown">
@@ -60,10 +65,18 @@
                 </div>
             </div>
         </div>
+<!-- ---------------------------- COUNTDOWN END ---------------------------- -->
 
         <!-- Deer Section -->
 
         <div class="container">
+            <!-- ------------------------------- BUBBLE -------------------------------- -->
+            <div id="bubble-container">
+                <p class="bubble">
+                    "It seems that the adress you typed is wrong. You may have done a mistake"
+                </p>
+            </div>
+            <!-- ----------------------------- BUBBLE END ------------------------------ -->
             <div class="artboard">
                 <div class="deer">
                     <div class="rocking">
@@ -184,7 +197,7 @@
 
     <!-- Javascript Declarations -->
     <script src="./js/functions.js"></script>
-
+    <script src="./js/bubble.js"></script>
     <script src="./js/cookie.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/countdown.js"></script>

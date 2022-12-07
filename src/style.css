@@ -27,6 +27,35 @@
     vertical-align: baseline;
 }
 
+/* --------------------------------- BUBBLE --------------------------------- */
+#bubble-container{
+    opacity: 0;
+}
+.bubble {
+    max-width: 60%;
+    position: relative;
+    padding: 20px 20px 20px 65px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    border: 1px solid black;
+    color: black;
+    left: 11%;
+}
+
+
+/* Speech bouble triangle */
+.bubble:after {
+    content: ' ';
+    border: 10px solid;
+    border-color: white transparent transparent white;
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+}
+
+/* ------------------------------- BUBBLE END ------------------------------- */
+
 html, body {
     height: 100%;
     margin: 0;
@@ -399,6 +428,7 @@ li span {
         z-index: 998;
         cursor: pointer;
     }
+
 }
 
 @media (min-width: 600px) and (max-width: 1325px) and (orientation: landscape) {
@@ -409,6 +439,17 @@ li span {
         top: 92%;
     }
 
+}
+
+@media screen and (max-width: 433px) {
+    .bubble {
+        left: 32%;
+    }
+}
+@media (min-width: 433px) and (max-width:1100px){
+    .bubble{
+        left: 20%;
+    }
 }
 
 @keyframes traino {
