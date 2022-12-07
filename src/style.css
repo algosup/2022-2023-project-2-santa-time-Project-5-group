@@ -28,9 +28,12 @@
 }
 
 /* --------------------------------- BUBBLE --------------------------------- */
-#bubble-container{
-    opacity: 0;
+#bubble-container {
+    opacity: 1;
+    /* Change to 1 to make it appear */
+
 }
+
 .bubble {
     max-width: 60%;
     position: relative;
@@ -446,8 +449,9 @@ li span {
         left: 32%;
     }
 }
-@media (min-width: 433px) and (max-width:1100px){
-    .bubble{
+
+@media (min-width: 433px) and (max-width:1100px) {
+    .bubble {
         left: 20%;
     }
 }
