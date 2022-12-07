@@ -64,6 +64,10 @@ html, body {
     text-transform: uppercase;
 }
 
+#headline {
+    font-size: xx-large;
+}
+
 form {
     width: 90%;
 }
