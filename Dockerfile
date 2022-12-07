@@ -1,12 +1,16 @@
-FROM httpd:2.4
+FROM nginx:1.23
 
 RUN apt-get update && apt-get upgrade -y
 
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /usr/local/apache2/conf/privkey.pem -out /usr/local/apache2/conf/fullchain.pem -subj "/C=FR/ST=Paris/L=Paris/O=42/OU=42/CN=xmas.algosup.com"
+RUN mkdir -p /etc/letsencrypt/live/xmas.algosup.com
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/letsencrypt/live/xmas.algosup.com/privkey.pem -out /etc/letsencrypt/live/xmas.algosup.com/fullchain.pem -subj "/C=FR/ST=Paris/L=Paris/O=42/OU=42/CN=xmas.algosup.com"
 
-COPY ./src/ /usr/local/apache2/htdocs/
-
-COPY ./apache/httpd.conf /usr/local/apache2/conf/
+COPY ./src ./usr/share/nginx/html
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 EXPOSE 443
+
+#ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
+#, "certbot", "--nginx", "--non-interactive", "--agree-tos", "--domains", "xmas.algosup.com", "--email", "franck.jeannin@algosup.com;"]
