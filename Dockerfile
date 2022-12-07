@@ -3,7 +3,7 @@ FROM nginx:1.23
 RUN apt-get update && apt-get upgrade -y
 
 RUN apt-get install -y certbot python3-certbot-nginx
-RUN certbot --nginx -d xmas.algosup.com -d www.xmas.algosup.com
+RUN certbot --nginx -d xmas.algosup.com -d www.xmas.algosup.com -m paul.marisoumary@algosup.com --non-interactive --agree-tos
 
 
 COPY ./src ./usr/share/nginx/html
