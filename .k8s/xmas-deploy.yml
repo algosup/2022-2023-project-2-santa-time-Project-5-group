@@ -10,10 +10,7 @@ spec:
     matchLabels:
       app: xmas
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
+    type: Recreate
   template:
     metadata:
       labels:
@@ -21,7 +18,7 @@ spec:
     spec:
       containers:
       - name: xmas
-        image: xmasimages.azurecr.io/xmas-image:latest
+        image: k8sxmasimages.azurecr.io/k8sxmasimage:latest
         imagePullPolicy: Always
         resources:
         # Requests and limits are mendatory for AKS
