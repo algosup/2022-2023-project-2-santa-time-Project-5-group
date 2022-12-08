@@ -29,7 +29,7 @@
 
 /* --------------------------------- BUBBLE --------------------------------- */
 #bubble-container {
-    opacity: 1;
+    opacity: 0;
     /* Change to 1 to make it appear */
 
 }
