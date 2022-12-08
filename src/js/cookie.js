@@ -15,14 +15,14 @@ if (ReadCookie('cookie') == "true") {
         console.log(ReadCookie('address'));
         AnimationTrigger();
     }
-// } else {
-//     acceptCookie.addEventListener('click', function() {
-//         popup.style.display = 'none';
-//         cookie = true;
-//         CreateCookie('cookie', cookie);
-//     });
-//     refuseCookie.addEventListener('click', function() {
-//         popup.style.display = 'none';
-//         cookie = false;
-//     });
-// }
+} else {
+    acceptCookie.addEventListener('click', function() {
+        popup.style.display = 'none';
+        cookie = true;
+        CreateCookie('cookie', cookie);
+    });
+    refuseCookie.addEventListener('click', function() {
+        popup.style.display = 'none';
+        cookie = false;
+    });
+}
