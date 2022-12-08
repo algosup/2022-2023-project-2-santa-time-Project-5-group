@@ -2,8 +2,8 @@ let input = document.querySelector('input');
 let bubble = document.querySelector(".bubble");
 let container = document.querySelector("#bubble-container");
 let denied = document.querySelector("#refuse");
-let accept = true;
-const geo = document.querySelector("#gps")
+let geo = true;
+const svg = document.querySelector("#gps")
 
 
 input.addEventListener('keyup', function (event) {
@@ -22,19 +22,29 @@ input.addEventListener('keyup', function (event) {
     }
 });
 
-/* --------------------------- NO GEOLOCALISATION --------------------------- */
-denied.addEventListener("click", ()=>{
-    accept = false;
-});
-geo.addEventListener("click", ()=>{
-if (accept == false) {
-    container.style.opacity = "1";
-    bubble.innerHTML = "I can not find you. It seems you did not activate your localisation"
+/* ------------------------- GEOLOCALISATION ON/OFF ------------------------- */
+navigator.geolocation.watchPosition(function (position) {
+    console.log("geolocalisation on");
+},
+    function (error) {
+        if (error.code == error.PERMISSION_DENIED) {
 
-    setTimeout(() => {
-        container.style.opacity = "0";
-    }, 3000)
-}
+            console.log("geolocalisation off");
+            geo = false;
+        }
+    });
+/* ---------------------- GEOLOCALISATION ON / OFF END ---------------------- */
+
+/* --------------------------- NO GEOLOCALISATION --------------------------- */
+svg.addEventListener("click", () => {
+    if (geo == false) {
+        container.style.opacity = "1";
+        bubble.innerHTML = "I can not find you. It seems you did not activate your localisation"
+
+        setTimeout(() => {
+            container.style.opacity = "0";
+        }, 3000)
+    }
 });
 /* ------------------------- NO GEOLOCALISATION END ------------------------- */
 
