@@ -6,7 +6,7 @@ RUN apt-get install -y certbot python3-certbot-nginx
 
 COPY ./src ./usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-COPY ./script/script.sh /script.sh
+COPY script/setup.sh /script.sh
 EXPOSE 80
 EXPOSE 443
 
