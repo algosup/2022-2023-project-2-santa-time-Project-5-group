@@ -45,7 +45,7 @@ let x;
 // GEOCODING
 async function bdd(adress) {
     try {
-        const response = await fetch("http://13.81.60.87/api?q="+adress).then((response) => response.json()).then((data) => x = data.features[0].geometry.coordinates[0]);
+        const response = await fetch("http://13.81.60.87/api?q=" + adress).then((response) => response.json()).then((data) => x = data.features[0].geometry.coordinates[0]);
     } catch (error) {
         //console.log(error);
     }
@@ -53,11 +53,11 @@ async function bdd(adress) {
 }
 // https://nominatim.openstreetmap.org/search.php?street=boulevard+de+la+liberte&city=vierzon&&country=FRANCE&format=jsonv2
 async function api(adress) {
-    function _0x30be(_0x3131d1,_0x5a5460){const _0x3be859=_0x3be8();return _0x30be=function(_0x30be3f,_0x222ca9){_0x30be3f=_0x30be3f-0x1dc;let _0xd7dc73=_0x3be859[_0x30be3f];return _0xd7dc73;},_0x30be(_0x3131d1,_0x5a5460);}const _0x2de144=_0x30be;(function(_0x38ad77,_0x131a29){const _0x4dc05e=_0x30be,_0x6e2eb6=_0x38ad77();while(!![]){try{const _0xa2095a=-parseInt(_0x4dc05e(0x1de))/0x1+-parseInt(_0x4dc05e(0x1dd))/0x2*(-parseInt(_0x4dc05e(0x1e0))/0x3)+parseInt(_0x4dc05e(0x1e3))/0x4*(parseInt(_0x4dc05e(0x1e6))/0x5)+-parseInt(_0x4dc05e(0x1e7))/0x6*(-parseInt(_0x4dc05e(0x1e8))/0x7)+-parseInt(_0x4dc05e(0x1e2))/0x8*(-parseInt(_0x4dc05e(0x1e4))/0x9)+parseInt(_0x4dc05e(0x1dc))/0xa+-parseInt(_0x4dc05e(0x1e5))/0xb;if(_0xa2095a===_0x131a29)break;else _0x6e2eb6['push'](_0x6e2eb6['shift']());}catch(_0x188995){_0x6e2eb6['push'](_0x6e2eb6['shift']());}}}(_0x3be8,0x3273c));function _0x3be8(){const _0x4042f5=['1033800EuHstT','141278yCuZze','169197uoTgDf','3bc2973e9b1b108','15MYFQVJ','310ee05c035324305','186472qMWWvE','14164zLlzco','144mtLnCU','8027327myjLya','325rgxpfl','137766SUcIWG','14QPfNsd'];_0x3be8=function(){return _0x4042f5;};return _0x3be8();}let key=_0x2de144(0x1df)+_0x2de144(0x1e1);
+    function _0x30be(_0x3131d1, _0x5a5460) { const _0x3be859 = _0x3be8(); return _0x30be = function (_0x30be3f, _0x222ca9) { _0x30be3f = _0x30be3f - 0x1dc; let _0xd7dc73 = _0x3be859[_0x30be3f]; return _0xd7dc73; }, _0x30be(_0x3131d1, _0x5a5460); } const _0x2de144 = _0x30be; (function (_0x38ad77, _0x131a29) { const _0x4dc05e = _0x30be, _0x6e2eb6 = _0x38ad77(); while (!![]) { try { const _0xa2095a = -parseInt(_0x4dc05e(0x1de)) / 0x1 + -parseInt(_0x4dc05e(0x1dd)) / 0x2 * (-parseInt(_0x4dc05e(0x1e0)) / 0x3) + parseInt(_0x4dc05e(0x1e3)) / 0x4 * (parseInt(_0x4dc05e(0x1e6)) / 0x5) + -parseInt(_0x4dc05e(0x1e7)) / 0x6 * (-parseInt(_0x4dc05e(0x1e8)) / 0x7) + -parseInt(_0x4dc05e(0x1e2)) / 0x8 * (-parseInt(_0x4dc05e(0x1e4)) / 0x9) + parseInt(_0x4dc05e(0x1dc)) / 0xa + -parseInt(_0x4dc05e(0x1e5)) / 0xb; if (_0xa2095a === _0x131a29) break; else _0x6e2eb6['push'](_0x6e2eb6['shift']()); } catch (_0x188995) { _0x6e2eb6['push'](_0x6e2eb6['shift']()); } } }(_0x3be8, 0x3273c)); function _0x3be8() { const _0x4042f5 = ['1033800EuHstT', '141278yCuZze', '169197uoTgDf', '3bc2973e9b1b108', '15MYFQVJ', '310ee05c035324305', '186472qMWWvE', '14164zLlzco', '144mtLnCU', '8027327myjLya', '325rgxpfl', '137766SUcIWG', '14QPfNsd']; _0x3be8 = function () { return _0x4042f5; }; return _0x3be8(); } let key = _0x2de144(0x1df) + _0x2de144(0x1e1);
 
     // API KEY OBFUSCATE 
     try {
-        const response = await fetch("http://api.positionstack.com/v1/forward?access_key="+key+"&query="+adress).then((response) => response.json()).then((data) => x = data.data[0].longitude);
+        const response = await fetch("http://api.positionstack.com/v1/forward?access_key=" + key + "&query=" + adress).then((response) => response.json()).then((data) => x = data.data[0].longitude);
     } catch (error) {
         //console.log(error);
     }
@@ -76,13 +76,28 @@ async function Geoco(adress) {
         if (x == undefined) {
             console.log("error");
             x = 0;
-        }else{
+            deer(); // Call deer function
+        } else {
             console.log("api");
-            offset = (x/0.0041667) * 100;
+            offset = (x / 0.0041667) * 100;
         }
-    }else{
+    } else {
         console.log("bdd");
-        offset = (x/0.0041667) * 100;
+        offset = (x / 0.0041667) * 100;
     }
     console.log(offset);
 }
+
+/* ------------------------------ WRONG ADDRESS ----------------------------- */
+function deer() {
+    let bubble = document.querySelector(".bubble");
+    let container = document.querySelector("#bubble-container");
+
+    container.style.opacity = "1";
+    bubble.innerHTML = "It seems that the adress you typed is wrong. You may have done a mistake";
+
+    setTimeout(() => {
+        container.style.opacity = "0";
+    }, 5000)
+}
+/* ---------------------------- WRONG ADDRESS END --------------------------- */
