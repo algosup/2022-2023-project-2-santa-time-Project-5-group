@@ -7,7 +7,7 @@ RUN apt-get install -y certbot python3-certbot-nginx
 COPY ./src ./usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
-COPY script/setup.sh /script.sh
+COPY script/script.sh /script.sh
 RUN chmod +x /script.sh
 
 RUN nginx -t
