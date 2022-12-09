@@ -11,6 +11,7 @@
     --font_color: #444444;
     --font_dark_color: #222222;
 
+
     --bg_element: #ffffff;
     --bg_element_focus: #f5f5f5;
 
@@ -61,6 +62,10 @@ html, body {
     font-weight: normal;
     letter-spacing: .125rem;
     text-transform: uppercase;
+}
+
+#headline {
+    font-size: xx-large;
 }
 
 form {
@@ -115,9 +120,12 @@ li span {
     color: white;
     text-decoration: none;
 }
-
-.text-notice:hover {
-    color: #ffd54f;
+.text-notice-2 {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 5%;
+    font-size: small;
+    color: gainsboro;
+    text-decoration: none;
 }
 
 .content {
