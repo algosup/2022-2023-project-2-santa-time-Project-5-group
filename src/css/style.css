@@ -76,7 +76,7 @@ html, body {
     animation: forwards 1.5s ease-in-out backimage;
 }
 
-@keyframes backimage {
+/* @keyframes backimage {
     50% {
         opacity: 0;
     }
@@ -84,7 +84,7 @@ html, body {
     100% {
         opacity: 1;
     }
-}
+} */
 
 #title {
     font-weight: normal;
@@ -153,33 +153,13 @@ li span {
     margin-bottom: 60px;
     color: var(--title_color);
 }
-
-.instruction p {
+/* ------------------------------- INSTRUCTION ------------------------------ */
+.instruction {
     color: var(--font_color);
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
     width: 100%;
-}
-
-.instruction h2 {
-    color: var(--font_color);
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    width: 100%;
-}
-
-@media only screen and (min-width: 990px) {
-    .content h1 {
-        font-size: 12vw;
-    }
-}
-
-@media screen and (max-width: 990px) {
-    .content h1 {
-        font-size: 18vw;
-    }
 }
 
 #instruction-box {
@@ -190,12 +170,11 @@ li span {
     width: 85%;
     position: fixed;
     border-radius: 15px;
-    /* background: var(--bg_element); */
     opacity: 0.95;
     font-family: 'Dosis', sans-serif;
     z-index: 1;
-    /* animation: spin 2s linear infinite; */
 }
+/* ----------------------------- INSTRUCTION END ---------------------------- */
 
 #myDiv {
     display: none;
