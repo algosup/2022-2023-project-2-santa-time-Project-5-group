@@ -94,7 +94,7 @@ function deer() {
     let container = document.querySelector("#bubble-container");
 
     container.style.opacity = "1";
-    bubble.innerHTML = "It seems that the adress you typed is wrong. You may have done a mistake";
+    bubble.innerHTML = "It seems that the adress you typed is wrong. You may have done a mistake.";
 
     setTimeout(() => {
         container.style.opacity = "0";

@@ -12,7 +12,7 @@ input.addEventListener('keyup', function (event) {
         /* ---------------------------------- EMPTY --------------------------------- */
         if (input.value === "") {
             container.style.opacity = "1";
-            bubble.innerHTML = "You did not typed an adress"
+            bubble.innerHTML = "You did not typed an address."
 
             setTimeout(() => {
                 container.style.opacity = "0";
@@ -32,7 +32,7 @@ svg.addEventListener("click", () => {
 
                 console.log("geolocalisation off");
                 container.style.opacity = "1";
-                bubble.innerHTML = "I can not find you. It seems you did not activate your localisation"
+                bubble.innerHTML = "I can not find you. It seems you did not activate your localisation."
 
                 setTimeout(() => {
                     container.style.opacity = "0";
