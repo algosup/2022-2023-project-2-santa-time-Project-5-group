@@ -1,6 +1,7 @@
 :root {
     --smaller: .75;
     --anim: 6s;
+    --animTimer: 2s;
 
     --accept_bg: #3CB371CC;
     --reject_bg: #DC143CCC;
@@ -11,12 +12,8 @@
     --font_color: #444444;
     --font_dark_color: #222222;
 
-
     --bg_element: #ffffff;
     --bg_element_focus: #f5f5f5;
-
-
-
 }
 
 * {
@@ -39,29 +36,19 @@ html, body {
     height: 100vh;
     width: 100vw;
     opacity: 0;
-    background-image: url(../img/2.svg);
+    background: center url(../img/2.svg) ;
     background-size: cover;
-    background-position: center;
     align-items: center;
-    background-color: linear-gradient(180deg, rgba(131,124,180,1) 0%, rgba(255,219,220,1) 63%, rgba(254,252,252,1) 96%);
     display: flex;
     font-family: 'Dosis', sans-serif;
     animation: forwards 1.5s ease-in-out backimage;
-}
-
-@keyframes backimage {
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 #title {
     font-weight: normal;
     letter-spacing: .125rem;
     text-transform: uppercase;
+    transition: all var(--animTimer) ease-out;
 }
 
 #headline {
@@ -75,7 +62,6 @@ form {
 li {
     display: inline-block;
     font-size: 1.5em;
-    list-style-type: none;
     padding: 1em;
     text-transform: uppercase;
 }
@@ -94,38 +80,18 @@ li span {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     flex-wrap: wrap;
-}
-
-@media all and (max-width: 450px) {
-    #footer-notice {
-        position: absolute;
-        bottom: 1%;
-        left: 65%;
-        transform: translateX(-50%);
-        width: 20%;
-        text-align: center;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-    }
 }
 
 .text-notice {
     font-family: 'Quicksand', sans-serif;
-    margin-bottom: 5%;
     font-size: small;
     color: white;
-    text-decoration: none;
 }
 .text-notice-2 {
     font-family: 'Quicksand', sans-serif;
-    margin-bottom: 5%;
     font-size: small;
     color: gainsboro;
-    text-decoration: none;
 }
 
 .content {
@@ -135,31 +101,15 @@ li span {
     transform: translate(-50%, -50%);
     max-width: 50vw;
     width: 100%;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .content h1 {
-    font-weight: 400;
     text-align: center;
     margin-bottom: 60px;
-    letter-spacing: 10px;
     color: var(--title_color);
-}
-
-@media only screen and (min-width: 990px) {
-    .content h1 {
-        font-size: 12vw;
-    }
-}
-
-@media screen and (max-width: 990px) {
-    .content h1 {
-        font-size: 18vw;
-    }
 }
 
 .fiouuuuuuuuuuuuuu {
@@ -189,15 +139,12 @@ li span {
     animation: var(--anim) linear traino;
 }
 
-.fiou-end {
-    transform: translateX(1000px);
-}
-
 .container-countdown {
     color: var(--title_color);
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25vh;
+    transition: all var(--animTimer) ease-out calc(var(--animTimer)/2);
 }
 
 .popup {
@@ -205,7 +152,6 @@ li span {
     bottom: -35vh;
     right: 5vw;
     width: 25vw;
-    /* height: 20vh; */
     padding: 15px;
     border-radius: 15px;
     background: var(--bg_element);
@@ -216,16 +162,11 @@ li span {
     align-items: center;
     justify-content: space-between;
     font-family: 'Dosis', sans-serif;
-}
-
-.popup-in {
     animation: forwards 1.5s ease-out popup;
 }
 
 .popup h2 {
     font-size: 1.5rem;
-    font-weight: 400;
-    margin: 0;
     text-align: center;
 }
 
@@ -234,7 +175,6 @@ li span {
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
-    width: 100%;
 }
 
 #cookie {
@@ -262,36 +202,14 @@ li span {
 #refuse:hover {
     background: var(--reject_bg);
 }
-
-@keyframes popup {
-    100% {
-        bottom: 2vh;
-    }
-}
-
-/* ----------------------------- classList START ---------------------------- */
-.hidden {
-    visibility: hidden;
-}
-
-.reveal {
-    visibility: visible;
-}
-
-/* ------------------------------ classList END ----------------------------- */
-
 #searchbar {
     width: 80vw;
     max-width: 700px;
     height: 60px;
-    /* border: 2px solid #; */
     border-radius: 50px;
-    font-size: 20px;
     display: flex;
     align-items: center;
-    flex-direction: row;
     background-color: var(--bg_element);
-    /* opacity: 0.8; */
 }
 
 #searchbar:focus {
@@ -299,46 +217,41 @@ li span {
 }
 
 #search {
-    width: 80%;
+    width: 100%;
     height: 80%;
-    border: none;
-    background-color: transparent;
     color: var(--font_dark_color);
     font-size: 28px;
     font-family: 'Dosis', sans-serif;
-    font-weight: 400;
     outline: none;
 }
 
-@media all and (max-width: 768px) {
-    h1 {
-        font-size: calc(1.5rem * var(--smaller));
-    }
 
-    li {
-        font-size: calc(1.125rem * var(--smaller));
-    }
-
-    li span {
-        font-size: calc(3.375rem * var(--smaller));
-    }
-    
+/* ----------------------------- classList START ---------------------------- */
+.hidden {
+    opacity: 0;
 }
 
-@media all and (max-width: 990px) {
-    .popup {
-        width: 45vw;
-        height: 20vh;
-        padding: 15px;
-    }
-    .popup h2 {
-        font-size: 1.8rem;
-    }
-    .popup p{
-        font-size: 1.4rem;
-    }
-    .popup button {
-        font-size: 1.6rem;
+.reveal {
+    opacity: 1;
+}
+
+/* ------------------------------ classList END ----------------------------- */
+
+
+/* ------------------------------ Media queries  ----------------------------- */
+
+@media all and (max-width: 450px) {
+    #footer-notice {
+        position: absolute;
+        bottom: 1%;
+        left: 65%;
+        transform: translateX(-50%);
+        width: 20%;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
     }
 }
 @media all and (max-width: 550px) {
@@ -378,16 +291,57 @@ li span {
         cursor: pointer;
     }
 }
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
+@media all and (max-width: 990px) {
+    .popup {
+        width: 45vw;
+        height: 20vh;
+        padding: 15px;
+    }
+    .popup h2 {
+        font-size: 1.8rem;
+    }
+    .popup p{
+        font-size: 1.4rem;
+    }
+    .popup button {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 990px) {
+    .content h1 {
+        font-size: 12vw;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .content h1 {
+        font-size: 18vw;
+    }
+}
 
 @media (min-width: 600px) and (max-width: 1325px) and (orientation: landscape) {
-
-
     #searchbar {
         position: fixed;
         top: 92%;
     }
 
 }
+
+/* ------------------------------ Keyframes ----------------------------- */
 
 @keyframes traino {
     40% {
@@ -404,5 +358,18 @@ li span {
 
     100% {
         transform: translateX(0vw) translateY(0vw) rotate(0deg);
+    }
+}
+@keyframes backimage {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes popup {
+    100% {
+        bottom: 2vh;
     }
 }
