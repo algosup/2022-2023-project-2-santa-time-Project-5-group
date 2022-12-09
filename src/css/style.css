@@ -1,6 +1,7 @@
 :root {
     --smaller: .75;
     --anim: 6s;
+    --animTimer: 2s;
 
     --accept_bg: #3CB371CC;
     --reject_bg: #DC143CCC;
@@ -62,6 +63,7 @@ html, body {
     font-weight: normal;
     letter-spacing: .125rem;
     text-transform: uppercase;
+    transition: all var(--animTimer) ease-out;
 }
 
 #headline {
@@ -198,6 +200,8 @@ li span {
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25vh;
+    transition: all var(--animTimer) ease-out;
+    transition-delay: calc(var(--animTimer)/2);
 }
 
 .popup {
@@ -271,11 +275,11 @@ li span {
 
 /* ----------------------------- classList START ---------------------------- */
 .hidden {
-    visibility: hidden;
+    opacity: 0;
 }
 
 .reveal {
-    visibility: visible;
+    opacity: 1;
 }
 
 /* ------------------------------ classList END ----------------------------- */
