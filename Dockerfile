@@ -10,6 +10,8 @@ COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY script/setup.sh /script.sh
 RUN chmod +x /script.sh
 
+RUN nginx -t
+
 EXPOSE 80
 EXPOSE 443
 
