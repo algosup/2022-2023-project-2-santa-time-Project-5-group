@@ -22,29 +22,23 @@ input.addEventListener('keyup', function (event) {
     }
 });
 
-/* ------------------------- GEOLOCALISATION ON/OFF ------------------------- */
-navigator.geolocation.watchPosition(function (position) {
-    console.log("geolocalisation on");
-},
-    function (error) {
-        if (error.code == error.PERMISSION_DENIED) {
-
-            console.log("geolocalisation off");
-            geo = false;
-        }
-    });
-/* ---------------------- GEOLOCALISATION ON / OFF END ---------------------- */
-
 /* --------------------------- NO GEOLOCALISATION --------------------------- */
 svg.addEventListener("click", () => {
-    if (geo == false) {
-        container.style.opacity = "1";
-        bubble.innerHTML = "I can not find you. It seems you did not activate your localisation"
+    navigator.geolocation.watchPosition(function () {
+        console.log("geolocalisation on");
+    },
+        function (error) {
+            if (error.code == error.PERMISSION_DENIED) {
 
-        setTimeout(() => {
-            container.style.opacity = "0";
-        }, 3000)
-    }
+                console.log("geolocalisation off");
+                container.style.opacity = "1";
+                bubble.innerHTML = "I can not find you. It seems you did not activate your localisation"
+
+                setTimeout(() => {
+                    container.style.opacity = "0";
+                }, 3000)
+            }
+        });
 });
 /* ------------------------- NO GEOLOCALISATION END ------------------------- */
 
