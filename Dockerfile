@@ -1,4 +1,4 @@
-FROM httpd:2.4
+FROM nginx:1.23
 
 RUN apt-get update && apt-get upgrade -y
 
