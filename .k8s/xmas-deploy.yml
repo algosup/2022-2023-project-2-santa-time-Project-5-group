@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xmas-deployment
+  labels:
+    app: xmas
+    uri: xmas.algosup.com
+spec:
+  selector:
+    matchLabels:
+      app: xmas
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: xmas
+    spec:
+      containers:
+      - name: xmas
+        image: k8sxmasimages.azurecr.io/k8sxmasimage:latest
+        imagePullPolicy: Always
+        resources:
+        # Requests and limits are mendatory for AKS
+          requests:
+            cpu: 125m
+            memory: 32Mi
+          limits:
+            cpu: 500m
+            memory: 128Mi
+        ports:
+        - containerPort: 80
