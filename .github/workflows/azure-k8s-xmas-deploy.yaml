@@ -1,15 +1,15 @@
-name: kubernetes-azure-deploy
+name: azure-k8s-xmas-deploy
 "on":
     push:
         branches:
             - main
     workflow_dispatch: {}
 env:
-    ACR_RESOURCE_GROUP: xmasimage
-    AZURE_CONTAINER_REGISTRY: xmasimages
+    ACR_RESOURCE_GROUP: prj5
+    AZURE_CONTAINER_REGISTRY: k8sxmasimages
     CLUSTER_NAME: SantaKubernetes
     CLUSTER_RESOURCE_GROUP: prj5
-    CONTAINER_NAME: xmas-image
+    CONTAINER_NAME: k8sxmasimage
     DEPLOYMENT_MANIFEST_PATH: |
         ./.k8s/xmas-deploy.yml
         ./.k8s/xmas-service.yml
@@ -57,4 +57,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: xmas-workflow
+                namespace: k8s-xmas-workflow

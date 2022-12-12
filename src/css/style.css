@@ -1,6 +1,7 @@
 :root {
     --smaller: .75;
     --anim: 6s;
+    --animTimer: 2s;
 
     --accept_bg: #3CB371CC;
     --reject_bg: #DC143CCC;
@@ -20,19 +21,51 @@
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
+/* --------------------------------- BUBBLE --------------------------------- */
+#bubble-container {
+    opacity: 0;
+    /* Change to 1 to make it appear */
+
+}
+
+.bubble {
+    max-width: 60%;
+    position: relative;
+    padding: 20px 20px 20px 65px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 4%;
+    border: 0.5px solid #B0B7C0;
+    color: black;
+    left: 11%;
+}
+
+
+/* Speech bouble triangle */
+.bubble:after {
+    content: ' ';
+    border: 10px solid;
+    border-color: white transparent transparent white;
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+}
+
+/* ------------------------------- BUBBLE END ------------------------------- */
 
 html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(131,124,180,1) 0%, rgba(255,219,220,1) 63%, rgba(254,252,252,1) 96%);
+    background: linear-gradient(180deg, rgba(131, 124, 180, 1) 0%, rgba(255, 219, 220, 1) 63%, rgba(254, 252, 252, 1) 96%);
 }
 
 #main {
@@ -43,7 +76,7 @@ html, body {
     background-size: cover;
     background-position: center;
     align-items: center;
-    background-color: linear-gradient(180deg, rgba(131,124,180,1) 0%, rgba(255,219,220,1) 63%, rgba(254,252,252,1) 96%);
+    background-color: linear-gradient(180deg, rgba(131, 124, 180, 1) 0%, rgba(255, 219, 220, 1) 63%, rgba(254, 252, 252, 1) 96%);
     display: flex;
     font-family: 'Dosis', sans-serif;
     animation: forwards 1.5s ease-in-out backimage;
@@ -53,6 +86,7 @@ html, body {
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -62,6 +96,7 @@ html, body {
     font-weight: normal;
     letter-spacing: .125rem;
     text-transform: uppercase;
+    transition: all var(--animTimer) ease-out;
 }
 
 #headline {
@@ -120,6 +155,7 @@ li span {
     color: white;
     text-decoration: none;
 }
+
 .text-notice-2 {
     font-family: 'Quicksand', sans-serif;
     margin-bottom: 5%;
@@ -148,6 +184,35 @@ li span {
     margin-bottom: 60px;
     letter-spacing: 10px;
     color: var(--title_color);
+}
+
+/* ------------------------------- INSTRUCTION ------------------------------ */
+.instruction {
+    color: var(--font_color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+#instruction-box {
+    left: 50%;
+    top: 50%;
+    padding: 3%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    position: fixed;
+    border-radius: 15px;
+    opacity: 0.95;
+    font-family: 'Dosis', sans-serif;
+    z-index: 1;
+}
+
+/* ----------------------------- INSTRUCTION END ---------------------------- */
+
+#myDiv {
+    display: none;
+    text-align: center;
 }
 
 @media only screen and (min-width: 990px) {
@@ -198,6 +263,8 @@ li span {
     margin: 0 auto;
     text-align: center;
     margin-bottom: 25vh;
+    transition: all var(--animTimer) ease-out;
+    transition-delay: calc(var(--animTimer)/2);
 }
 
 .popup {
@@ -271,11 +338,11 @@ li span {
 
 /* ----------------------------- classList START ---------------------------- */
 .hidden {
-    visibility: hidden;
+    opacity: 0;
 }
 
 .reveal {
-    visibility: visible;
+    opacity: 1;
 }
 
 /* ------------------------------ classList END ----------------------------- */
@@ -322,7 +389,7 @@ li span {
     li span {
         font-size: calc(3.375rem * var(--smaller));
     }
-    
+
 }
 
 @media all and (max-width: 990px) {
@@ -331,37 +398,47 @@ li span {
         height: 20vh;
         padding: 15px;
     }
+
     .popup h2 {
         font-size: 1.8rem;
     }
-    .popup p{
+
+    .popup p {
         font-size: 1.4rem;
     }
+
     .popup button {
         font-size: 1.6rem;
     }
 }
+
 @media all and (max-width: 550px) {
     .popup {
         width: 80vw;
         height: 20vh;
         padding: 15px;
     }
+
     .popup h2 {
         font-size: 1.6rem;
     }
-    .popup p{
+
+    .popup p {
         font-size: 1.2rem;
     }
+
     .popup button {
         font-size: 1.4rem;
     }
+
     #accept {
         color: var(--accept_color);
     }
+
     #refuse {
         color: var(--reject_color);
     }
+
     .fiouuuuuuuuuuuuuu {
         height: 85%;
         aspect-ratio: 1/1;
@@ -369,6 +446,7 @@ li span {
         margin: 0 1vw 0 3vw;
         z-index: 999;
     }
+
     .gps {
         height: 85%;
         aspect-ratio: 1/1;
@@ -377,6 +455,7 @@ li span {
         z-index: 998;
         cursor: pointer;
     }
+
 }
 
 @media (min-width: 600px) and (max-width: 1325px) and (orientation: landscape) {
@@ -387,6 +466,18 @@ li span {
         top: 92%;
     }
 
+}
+
+@media screen and (max-width: 433px) {
+    .bubble {
+        left: 32%;
+    }
+}
+
+@media (min-width: 433px) and (max-width:1100px) {
+    .bubble {
+        left: 20%;
+    }
 }
 
 @keyframes traino {
