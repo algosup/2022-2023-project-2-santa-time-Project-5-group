@@ -96,9 +96,9 @@ function deer(param, timer) {
     let message;
 
     let intro = "Welcome to my christmas countdown to find out how long it will be before Santa comes.";
-    let noAdress = "Hey bud, You did not typed an address.";
-    let wrongAdress = "It seems that the adress you typed is wrong. You may have done a mistake.";
-    let noGeo = "I can not find you. It seems you did not activate your localisation."
+    let noAdress = "Hey buddy, You did not typed an address.";
+    let wrongAdress = "It seems that the adress you typed is wrong. Don't you know where you live?";
+    let noGeo = "I can not find you. Did you allowed me to access your localisation?"
 
     container.style.opacity = "1";
 

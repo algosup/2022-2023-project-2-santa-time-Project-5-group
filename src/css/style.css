@@ -49,6 +49,7 @@ p.bubble {
 	padding: 20px;
 	font-size: large;
     margin-top: 2%;
+    z-index: 1;
 }
 p.bubble {
 	width: 250px;
@@ -58,18 +59,19 @@ p.bubble {
 
 
 /* Speech bouble triangle */
-p.bubble:before,
-p.bubble:after {
+#bubble-container:before,
+#bubble-container:after {
 	content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
+    z-index: 2;
 }
 
-p.bubble:before,
-p.bubble:after {
-	left: -30px;
-	bottom: 30px;
+#bubble-container:before,
+#bubble-container:after {
+	left: 160px;
+	bottom: 180px;
 	width: 40px;
 	height: 40px;
 	background-color: #fff;
@@ -79,11 +81,11 @@ p.bubble:after {
 	border-radius: 28px;
 }
 
-p.bubble:after {
+#bubble-container:after {
 	width: 20px;
 	height: 20px;
-	left: -40px;
-	bottom: 25px;
+	left: 150px;
+	bottom: 180px;
 	-webkit-border-radius: 18px;
 	-moz-border-radius: 18px;
 	border-radius: 18px;
@@ -474,12 +476,6 @@ li span {
     p.bubble{
         width: 100%;
     }
-    p.bubble::before{
-        top: 60px;
-    }
-    p.bubble::after{
-        bottom: 15%;
-    }
 
 }
 @media all and (max-width: 450px) {
@@ -494,9 +490,6 @@ li span {
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-    }
-    p.bubble::after{
-        bottom: 50%;
     }
 }
 
