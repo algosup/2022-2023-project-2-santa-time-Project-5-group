@@ -65,28 +65,21 @@ async function api(adress) {
 }
 
 async function Geoco(adress) {
-    if (adress == "") {
-        //console.log("Address Empty");
-        deer("noAdress"); // Call deer function
-        return;
-    }
-
     let x = await bdd(adress);
-    if (x == undefined) {
+    if (x == undefined) { // No adress found in BDD case
         x = await api(adress);
-        if (x == undefined) {
-            console.log("error");
+        if (x == undefined) { // No adress found case
             x = 0;
-            deer("wrongAdress"); // Call deer function
+            deer("wrongAdress");
         } else {
-            console.log("api");
+            // console.log("api");
             offset = (x / 0.0041667) * 100;
         }
     } else {
-        console.log("bdd");
+        // console.log("bdd");
         offset = (x / 0.0041667) * 100;
     }
-    console.log(offset);
+    //console.log(offset);
 }
 
 /* ------------------------------ WRONG ADDRESS ----------------------------- */
@@ -94,19 +87,27 @@ function deer(param) {
     let bubble = document.querySelector(".bubble");
     let container = document.querySelector("#bubble-container");
     let message;
+    let timer;
 
-    let noAdress = "You did not typed an address.";
-    let wrongAdress = "It seems that the adress you typed is wrong. You may have done a mistake.";
-    let noGeo = "I can not find you. It seems you did not activate your localisation."
+    let intro = "Welcome to my christmas countdown, find out how long it will be before we come.";
+    let noAdress = "Hey buddy, You didn't type any address.";
+    let wrongAdress = "It seems that the address you typed is wrong. Don't you know where you live?";
+    let noGeo = "I can't find you. Did you allow me to access your localisation?"
 
     container.style.opacity = "1";
 
     if (param == "noAdress"){
         message = noAdress;
+        timer = 5000;
     }else if (param == "wrongAdress") {
         message = wrongAdress;
+        timer = 7500;
     }else if (param == "noGeo") {
         message = noGeo
+        timer = 8500;
+    }else if (param == "intro") {
+        message = intro;
+        timer = 10000;
     }
 
     if (message != undefined) {
@@ -115,6 +116,6 @@ function deer(param) {
 
     setTimeout(() => {
         container.style.opacity = "0";
-    }, 5000)
+    }, timer)
 }
 /* ---------------------------- WRONG ADDRESS END --------------------------- */
