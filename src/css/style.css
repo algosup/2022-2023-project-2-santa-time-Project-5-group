@@ -76,7 +76,7 @@ html, body {
     animation: forwards 1.5s ease-in-out backimage;
 }
 
-/* @keyframes backimage {
+@keyframes backimage {
     50% {
         opacity: 0;
     }
@@ -84,7 +84,7 @@ html, body {
     100% {
         opacity: 1;
     }
-} */
+}
 
 #title {
     font-weight: normal;
