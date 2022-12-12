@@ -42,8 +42,8 @@
     padding: 20px 20px 20px 65px;
     background: white;
     border-radius: 10px;
-    margin-bottom: 35px;
-    border: 0.5px solid black;
+    margin-top: 4%;
+    border: 0.5px solid #B0B7C0;
     color: black;
     left: 11%;
 }
@@ -76,7 +76,7 @@ html, body {
     background-size: cover;
     background-position: center;
     align-items: center;
-    background-color: linear-gradient(180deg, rgba(131,124,180,1) 0%, rgba(255,219,220,1) 63%, rgba(254,252,252,1) 96%);
+    background-color: linear-gradient(180deg, rgba(131, 124, 180, 1) 0%, rgba(255, 219, 220, 1) 63%, rgba(254, 252, 252, 1) 96%);
     display: flex;
     font-family: 'Dosis', sans-serif;
     animation: forwards 1.5s ease-in-out backimage;
@@ -86,6 +86,7 @@ html, body {
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -154,6 +155,7 @@ li span {
     color: white;
     text-decoration: none;
 }
+
 .text-notice-2 {
     font-family: 'Quicksand', sans-serif;
     margin-bottom: 5%;
@@ -183,6 +185,7 @@ li span {
     letter-spacing: 10px;
     color: var(--title_color);
 }
+
 /* ------------------------------- INSTRUCTION ------------------------------ */
 .instruction {
     color: var(--font_color);
@@ -204,6 +207,7 @@ li span {
     font-family: 'Dosis', sans-serif;
     z-index: 1;
 }
+
 /* ----------------------------- INSTRUCTION END ---------------------------- */
 
 #myDiv {
@@ -385,7 +389,7 @@ li span {
     li span {
         font-size: calc(3.375rem * var(--smaller));
     }
-    
+
 }
 
 @media all and (max-width: 990px) {
@@ -394,12 +398,15 @@ li span {
         height: 20vh;
         padding: 15px;
     }
+
     .popup h2 {
         font-size: 1.8rem;
     }
-    .popup p{
+
+    .popup p {
         font-size: 1.4rem;
     }
+
     .popup button {
         font-size: 1.6rem;
     }
