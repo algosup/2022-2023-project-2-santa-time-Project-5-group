@@ -65,19 +65,12 @@ async function api(adress) {
 }
 
 async function Geoco(adress) {
-    if (adress == "") {
-        //console.log("Address Empty");
-        deer("noAdress", 5000); // Call deer function
-        return;
-    }
-
     let x = await bdd(adress);
-    if (x == undefined) {
+    if (x == undefined) { // No adress found in BDD case
         x = await api(adress);
-        if (x == undefined) {
-            console.log("error");
+        if (x == undefined) { // No adress found case
             x = 0;
-            deer("wrongAdress", 5000); // Call deer function
+            deer("wrongAdress");
         } else {
             console.log("api");
             offset = (x / 0.0041667) * 100;
@@ -86,14 +79,15 @@ async function Geoco(adress) {
         console.log("bdd");
         offset = (x / 0.0041667) * 100;
     }
-    console.log(offset);
+    //console.log(offset);
 }
 
 /* ------------------------------ WRONG ADDRESS ----------------------------- */
-function deer(param, timer) {
+function deer(param) {
     let bubble = document.querySelector(".bubble");
     let container = document.querySelector("#bubble-container");
     let message;
+    let timer;
 
     let intro = "Welcome to my christmas countdown to find out how long it will be before Santa comes.";
     let noAdress = "Hey buddy, You did not typed an address.";
@@ -104,12 +98,16 @@ function deer(param, timer) {
 
     if (param == "noAdress"){
         message = noAdress;
+        timer = 5000;
     }else if (param == "wrongAdress") {
         message = wrongAdress;
+        timer = 5000;
     }else if (param == "noGeo") {
         message = noGeo
+        timer = 5000;
     }else if (param == "intro") {
         message = intro;
+        timer = 10000;
     }
 
     if (message != undefined) {

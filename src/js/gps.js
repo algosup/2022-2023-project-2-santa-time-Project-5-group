@@ -21,7 +21,7 @@ gps.addEventListener("click", (event) => {
     // handle error case
     function onError() {
         console.log('error');
-        deer("noGeo", 5000); // Call deer function
+        deer("noGeo"); // Call deer function
     }
 
 });
