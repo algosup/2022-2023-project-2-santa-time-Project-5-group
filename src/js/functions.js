@@ -89,10 +89,10 @@ function deer(param) {
     let message;
     let timer;
 
-    let intro = "Welcome to my christmas countdown to find out how long it will be before Santa comes.";
-    let noAdress = "Hey buddy, You did not typed an address.";
-    let wrongAdress = "It seems that the adress you typed is wrong. Don't you know where you live?";
-    let noGeo = "I can not find you. Did you allowed me to access your localisation?"
+    let intro = "Welcome to my christmas countdown, find out how long it will be before we come.";
+    let noAdress = "Hey buddy, You didn't typed any address.";
+    let wrongAdress = "It seems that the address you typed is wrong. Don't you know where you live?";
+    let noGeo = "I can't find you. Did you allowed me to access your localisation?"
 
     container.style.opacity = "1";
 
