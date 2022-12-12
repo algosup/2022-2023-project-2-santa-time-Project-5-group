@@ -14,6 +14,7 @@ env:
         ./.k8s/xmas-deploy.yml
         ./.k8s/xmas-service.yml
         ./.k8s/xmas-ingress.yml
+        ./.k8s/xmas-issuer.yml
 jobs:
     buildImage:
         permissions:

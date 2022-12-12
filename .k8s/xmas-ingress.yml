@@ -8,10 +8,11 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: lets-encrypt
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
         - xmas.algosup.com
-      #secretName: certman-x
+      secretName: tls-secret
   rules:
     - host: xmas.algosup.com
       http:
