@@ -7,6 +7,10 @@
 - [Web Application](#web-application)
 - [Server Application](#server-application)
 - [Documentation](#documentation)
+- [Load Testing](#load-testing)
+  - [Website Load Testing](#website-load-testing)
+  - [Server Load Testing](#server-load-testing)
+  - [Database Load Testing](#database-load-testing)
 
     
 
@@ -63,6 +67,11 @@ Issues have to respect the **Template** that is provided on Github.
 | 22 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Partners Display Partern's website | Partners page shoul display all partners websites as an Iframe if they are online |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 11/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
 | 23 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Partners Redirect buttons | Partners redirect buttons should each redirect to the correct website  |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 11/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
 | 24 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Partners Back button | Back button on partners page should redirect to the main page  |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 11/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 25 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Deer Responsiveness | Deer should be responsive on every devices  |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 12/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 26 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Deer Messages | Deer should return the good message depending on the error  |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 12/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 27 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Deer Welcome | Deer should display the welcome message  |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 12/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 28 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Timer Title | Timer should be displayed in the title  |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 12/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 29 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Timer Title sync | Timer in the title should be sync with the displayed timer  |  <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> |  <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 12/12/2022 | Guillaume Riviere | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
 
 
 
@@ -70,9 +79,12 @@ Issues have to respect the **Template** that is provided on Github.
 
 # Server Application
 
-| **Test** | **Status** | **Description** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
+| **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Calculation Time shift should be exact  | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul>   | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Calculation Time shift should be exact | Time calculation is exact | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Load Response time from the server from 1 user | The response time is good. See [Website Load Testing](#website-load-testing)  | <ul><li>Windows 11</li></ul> | <ul><li>Chrome</li></ul> | 12/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Load Response time from the server from 19620 requests | The response time is good. See [Server Load Testing](#server-load-testing)  | <ul><li>Windows 11</li></ul> | <ul><li>Chrome</li></ul> | 12/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
+| 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Load Response time from the Database from 4293 requests | The response time is ok regarding the fact that this time is hidden. See [Database Load Testing](#database-load-testing)  | <ul><li>Windows 11</li></ul> | <ul><li>Chrome</li></ul> | 12/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
 
 
 # Documentation
@@ -81,3 +93,49 @@ Issues have to respect the **Template** that is provided on Github.
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS after fix</span></li> </ul> | Functionnal is valid | 2022 - 28 - 11 | Guillaume Riviere | [LINK](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/pull/4) | / | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> </ul> |
 | 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS after fix</span></li> </ul> | Functionnal is valid | 2022 - 5 - 12 | Guillaume Riviere | [LINK](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/pull/7) | / | <ul> <li><span style="color:orange; font-weight:bold">YES</span></li> </ul> |
+
+
+# Load Testing
+
+## Website Load Testing
+
+The website have been tested with the following load testing tool : [https://www.mozilla.org/fr/](https://www.mozilla.org/fr/)
+With this parameters :
+-  1 user
+-  1 refresh with cache cleared
+
+The website was able to handle this load without any problem.
+This resulted in a response time of **0.785 seconds**.
+In comparison, the average response time of [algosup.com](https://algosup.com) is **1.55 seconds**.
+
+![](./img/load.png)
+
+## Server Load Testing
+
+
+The website have been tested with the following load testing tool : [https://loadster.app](https://loadster.app)
+With this parameters :
+- 100 users
+- 3 minutes
+- 1599 iterations
+
+For a total of **19 620** requests sent to the website in 3 minutes, with an average of **6500 requests** per minute.
+The website was able to handle this load without any problem.
+This resulted in an average response time of **0.926 seconds**. ( 0.785 for a single request )
+
+![](./img/user_load.png)
+
+
+## Database Load Testing
+
+The database have been tested with the following load testing tool : [https://loadster.app](https://loadster.app)
+With this parameters :
+- 300 users
+- 3 minutes
+- 1431 iterations
+
+For a total of **4293** requests sent to the database in 3 minutes, with an average of **1431 requests** per minute.
+The database handled this load with some latency.
+This resulted in an average response time of **9.33 seconds**. ( 0.585 for a single request )
+
+![](./img/db_load.png) 
