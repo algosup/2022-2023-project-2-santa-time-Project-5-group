@@ -12,7 +12,7 @@ spec:
   tls:
     - hosts:
         - xmas.algosup.com
-      secretName: letsencrypt
+      #secretName: certman-x #missing
   rules:
     - host: xmas.algosup.com
       http:
