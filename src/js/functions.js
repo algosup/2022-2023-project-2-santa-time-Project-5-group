@@ -66,7 +66,8 @@ async function api(adress) {
 
 async function Geoco(adress) {
     if (adress == "") {
-        console.log("Address Empty");
+        //console.log("Address Empty");
+        deer("noAdress"); // Call deer function
         return;
     }
 
@@ -76,7 +77,7 @@ async function Geoco(adress) {
         if (x == undefined) {
             console.log("error");
             x = 0;
-            deer(); // Call deer function
+            deer("wrongAdress"); // Call deer function
         } else {
             console.log("api");
             offset = (x / 0.0041667) * 100;
@@ -89,12 +90,28 @@ async function Geoco(adress) {
 }
 
 /* ------------------------------ WRONG ADDRESS ----------------------------- */
-function deer() {
+function deer(param) {
     let bubble = document.querySelector(".bubble");
     let container = document.querySelector("#bubble-container");
+    let message;
+
+    let noAdress = "You did not typed an address.";
+    let wrongAdress = "It seems that the adress you typed is wrong. You may have done a mistake.";
+    let noGeo = "I can not find you. It seems you did not activate your localisation."
 
     container.style.opacity = "1";
-    bubble.innerHTML = "It seems that the adress you typed is wrong. You may have done a mistake.";
+
+    if (param == "noAdress"){
+        message = noAdress;
+    }else if (param == "wrongAdress") {
+        message = wrongAdress;
+    }else if (param == "noGeo") {
+        message = noGeo
+    }
+
+    if (message != undefined) {
+        bubble.innerHTML = message
+    }
 
     setTimeout(() => {
         container.style.opacity = "0";
