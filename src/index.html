@@ -16,45 +16,68 @@
     </script>
 </head>
 
-<body>
-    <div class="temp-bg"></div>
-    <div id="main">
-        <div id="opaque"></div>
-        <div class="content">
-            <h1 id="title">XMAS</h1>
+<body onload="myFunction()" style="margin:0;">
 
-            <div id="searchbar">
-                <svg id="fiou" class="fiouuuuuuuuuuuuuu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                    <path
-                        d="M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96V256c0 53 43 96 96 96v32h64V352H384v32h64V352c53 0 96-43 96-96V160c17.7 0 32-14.3 32-32s-14.3-32-32-32H512 480c-17.7 0-32 14.3-32 32v41.3c0 30.2-24.5 54.7-54.7 54.7c-75.5 0-145.6-38.9-185.6-102.9l-4.3-6.9C174.2 67.6 125 37.6 70.7 32.7c-2.2-.5-4.4-.7-6.7-.7H55 32zM640 384c0-17.7-14.3-32-32-32s-32 14.3-32 32v8c0 13.3-10.7 24-24 24H64c-17.7 0-32 14.3-32 32s14.3 32 32 32H552c48.6 0 88-39.4 88-88v-8z" />
-                </svg>
-                <form action="">
-                    <input type="text" id="search" placeholder="City name..">
-                </form>
-                <svg id="gps" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M90,42H83.3936A35.9331,35.9331,0,0,0,54,12.6064V6A6,6,0,0,0,42,6v6.6064A35.9331,35.9331,0,0,0,12.6064,42H6A6,6,0,0,0,6,54h6.6064A35.9331,35.9331,0,0,0,42,83.3936V90a6,6,0,0,0,12,0V83.3936A35.9331,35.9331,0,0,0,83.3936,54H90a6,6,0,0,0,0-12ZM48,72A24,24,0,1,1,72,48,24.0238,24.0238,0,0,1,48,72Z" />
-                    <path d="M48,36A12,12,0,1,0,60,48,12.0157,12.0157,0,0,0,48,36Z" />
-                </svg>
+<!-- ------------------------------- CONTEXT ------------------------------- -->
+    <div id="instruction-box">
+        <div class="instruction">
+        <h2>Welcome to XMAS</h2>
+        <p>The christmas countdown to find out how long it will be before Santa comes.</p>
+            </div>
+    </div>
+<!-- ----------------------------- CONTEXT END ----------------------------- -->
+
+    <div style="display:none;" id="myDiv">
+
+        <div class="temp-bg"></div>
+        <div id="main">
+            <div id="opaque"></div>
+            <div class="content">
+                <h1 id="title">XMAS</h1>
+
+<!-- ------------------------------ SEARCHBAR ------------------------------ -->
+                <div id="searchbar">
+                    <svg id="fiou" class="fiouuuuuuuuuuuuuu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <path
+                            d="M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96V256c0 53 43 96 96 96v32h64V352H384v32h64V352c53 0 96-43 96-96V160c17.7 0 32-14.3 32-32s-14.3-32-32-32H512 480c-17.7 0-32 14.3-32 32v41.3c0 30.2-24.5 54.7-54.7 54.7c-75.5 0-145.6-38.9-185.6-102.9l-4.3-6.9C174.2 67.6 125 37.6 70.7 32.7c-2.2-.5-4.4-.7-6.7-.7H55 32zM640 384c0-17.7-14.3-32-32-32s-32 14.3-32 32v8c0 13.3-10.7 24-24 24H64c-17.7 0-32 14.3-32 32s14.3 32 32 32H552c48.6 0 88-39.4 88-88v-8z" />
+                    </svg>
+                    <form action="">
+                        <input type="text" id="search" placeholder="Search...">
+                    </form>
+                    <svg id="gps" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M90,42H83.3936A35.9331,35.9331,0,0,0,54,12.6064V6A6,6,0,0,0,42,6v6.6064A35.9331,35.9331,0,0,0,12.6064,42H6A6,6,0,0,0,6,54h6.6064A35.9331,35.9331,0,0,0,42,83.3936V90a6,6,0,0,0,12,0V83.3936A35.9331,35.9331,0,0,0,83.3936,54H90a6,6,0,0,0,0-12ZM48,72A24,24,0,1,1,72,48,24.0238,24.0238,0,0,1,48,72Z" />
+                        <path d="M48,36A12,12,0,1,0,60,48,12.0157,12.0157,0,0,0,48,36Z" />
+                    </svg>
+                </div>
+            </div>
+<!-- ---------------------------- SEARCHBAR END ---------------------------- -->
+
+<!-- ------------------------------ COUNTDOWN ------------------------------ -->
+            <div class="container-countdown hidden" id="container-countdown">
+                <h1 id="headline">Santa Claus' visit</h1>
+                <div id="countdown">
+                    <ul>
+                        <li><span id="days"></span>days</li>
+                        <li><span id="hours"></span>Hours</li>
+                        <li><span id="minutes"></span>Minutes</li>
+                        <li><span id="seconds"></span>Seconds</li>
+                    </ul>
+                </div>
             </div>
         </div>
+<!-- ---------------------------- COUNTDOWN END ---------------------------- -->
 
-        <div class="container-countdown hidden" id="container-countdown">
-            <h1 id="headline">Santa Claus' visit</h1>
-            <div id="countdown">
-                <ul>
-                    <li><span id="days"></span>days</li>
-                    <li><span id="hours"></span>Hours</li>
-                    <li><span id="minutes"></span>Minutes</li>
-                    <li><span id="seconds"></span>Seconds</li>
-                </ul>
-            </div>
-        </div>
-        </div>
-
-    <!-- Deer Section -->
+        <!-- Deer Section -->
 
         <div class="container">
+            <!-- ------------------------------- BUBBLE -------------------------------- -->
+            <div id="bubble-container">
+                <p class="bubble">
+                    
+                </p>
+            </div>
+            <!-- ----------------------------- BUBBLE END ------------------------------ -->
             <div class="artboard">
                 <div class="deer">
                     <div class="rocking">
@@ -162,7 +185,7 @@
 
 <!-- Popup Legal -->
     
-    <div class="popup" id="popup">
+    <div class="popup popup-in" id="popup">
         <h2 id="cookie-title">We use cookies</h2>
         <p>We use cookies to save your latest search.</p>
         <div id="cookie">
@@ -171,14 +194,18 @@
         </div>
     </div>
 
-<!-- Javascript Declarations -->
+    </div>
+
+    <!-- Javascript Declarations -->
     <script src="./js/functions.js"></script>
+    <script src="./js/bubble.js"></script>
     
     <script src="./js/random.js"></script>
     <script src="./js/cookie.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/countdown.js"></script>
     <script src="./js/gps.js"></script>
+    <script src="./js/instruction.js"></script>
 
 
 
