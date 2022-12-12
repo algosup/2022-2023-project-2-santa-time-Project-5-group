@@ -72,11 +72,11 @@ async function Geoco(adress) {
             x = 0;
             deer("wrongAdress");
         } else {
-            console.log("api");
+            // console.log("api");
             offset = (x / 0.0041667) * 100;
         }
     } else {
-        console.log("bdd");
+        // console.log("bdd");
         offset = (x / 0.0041667) * 100;
     }
     //console.log(offset);
@@ -90,9 +90,9 @@ function deer(param) {
     let timer;
 
     let intro = "Welcome to my christmas countdown, find out how long it will be before we come.";
-    let noAdress = "Hey buddy, You didn't typed any address.";
+    let noAdress = "Hey buddy, You didn't type any address.";
     let wrongAdress = "It seems that the address you typed is wrong. Don't you know where you live?";
-    let noGeo = "I can't find you. Did you allowed me to access your localisation?"
+    let noGeo = "I can't find you. Did you allow me to access your localisation?"
 
     container.style.opacity = "1";
 
@@ -101,10 +101,10 @@ function deer(param) {
         timer = 5000;
     }else if (param == "wrongAdress") {
         message = wrongAdress;
-        timer = 5000;
+        timer = 7500;
     }else if (param == "noGeo") {
         message = noGeo
-        timer = 5000;
+        timer = 8500;
     }else if (param == "intro") {
         message = intro;
         timer = 10000;

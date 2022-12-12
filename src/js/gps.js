@@ -11,7 +11,7 @@ gps.addEventListener("click", (event) => {
             longitude
         } = position.coords;
 
-        console.log(`Your location: (${latitude},${longitude})`);
+        // console.log(`Your location: (${latitude},${longitude})`);
         offset = (longitude / 0.0041667) * 100;
 
         // Animation Trigger 
@@ -20,7 +20,7 @@ gps.addEventListener("click", (event) => {
 
     // handle error case
     function onError() {
-        console.log('error');
+        // console.log('error');
         deer("noGeo"); // Call deer function
     }
 
