@@ -3,10 +3,12 @@ kind: Ingress
 metadata:
   name: xmas
   annotations:
-    kubernetes.io/ingress.class: "nginx"    
+    kubernetes.io/ingress.class: "nginx"
+    app.kubernetes.io/component: controller
     cert-manager.io/issuer: "letsencrypt-prod"
-
+    ingressclass.kubernetes.io/is-default-class: "true"
 spec:
+  controller: k8s.io/ingress-nginx
   ingressClassName: nginx
   tls:
   - hosts:
