@@ -13,6 +13,7 @@ env:
     DEPLOYMENT_MANIFEST_PATH: |
         ./.k8s/xmas-deploy.yml
         ./.k8s/xmas-service.yml
+        ./.k8s/xmas-ressource.yml
 jobs:
     buildImage:
         permissions:
@@ -28,7 +29,7 @@ jobs:
                 subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
                 tenant-id: ${{ secrets.AZURE_TENANT_ID }}
             - name: Build and push image to ACR
-              run: az acr build --image ${{ env.CONTAINER_NAME }}:${{ github.sha }} --registry ${{ env.AZURE_CONTAINER_REGISTRY }} -g ${{ env.ACR_RESOURCE_GROUP }} -f ./Dockerfile ./
+              run: az acr build --image ${{ env.CONTAINER_NAME }}:${{ github.sha }} --registry ${{ env.AZURE_CONTAINER_REGISTRY }} -g ${{ env.ACR_RESOURCE_GROUP }} -f ./dockerfile ./
     deploy:
         permissions:
             actions: read
