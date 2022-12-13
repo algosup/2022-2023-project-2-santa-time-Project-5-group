@@ -1,23 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: xmas
-  annotations:
-    kubernetes.io/ingress.class: "nginx"    
-    cert-manager.io/issuer: "letsencrypt-prod"
-
+  name: xmas-ingress
+  labels:
+    app: xmas
+    uri: xmas.algosup.com
 spec:
-  ingressClassName: nginx
-  tls:
-  - hosts:
-    - xmas.algosup.com
-    secretName: quickstart-example-tls
   rules:
   - host: xmas.algosup.com
     http:
       paths:
-      - path: /
-        pathType: Prefix
+      - pathType: Prefix
+        path: /
         backend:
           service:
             name: xmas
