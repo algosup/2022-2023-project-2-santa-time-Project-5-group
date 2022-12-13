@@ -33,7 +33,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
   namespace: k8s-xmas-workflow
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -150,7 +150,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
   namespace: k8s-xmas-workflow
 rules:
 - apiGroups:
@@ -251,7 +251,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
 rules:
 - apiGroups:
   - admissionregistration.k8s.io
@@ -290,15 +290,15 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
   namespace: k8s-xmas-workflow
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
 subjects:
 - kind: ServiceAccount
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
   namespace: k8s-xmas-workflow
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -328,14 +328,14 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
 subjects:
 - kind: ServiceAccount
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
   namespace: k8s-xmas-workflow
 ---
 apiVersion: v1
@@ -518,7 +518,7 @@ spec:
       volumes:
       - name: webhook-cert
         secret:
-          secretName: ingress-nginx-admission
+          secretName:  nginx-ingress-nginx-admission
 ---
 apiVersion: batch/v1
 kind: Job
@@ -529,7 +529,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission-create
+  name:  nginx-ingress-nginx-admission-create
   namespace: k8s-xmas-workflow
 spec:
   template:
@@ -540,14 +540,14 @@ spec:
         app.kubernetes.io/name: ingress-nginx
         app.kubernetes.io/part-of: ingress-nginx
         app.kubernetes.io/version: 1.5.1
-      name: ingress-nginx-admission-create
+      name:  nginx-ingress-nginx-admission-create
     spec:
       containers:
       - args:
         - create
         - --host=ingress-nginx-controller-admission,ingress-nginx-controller-admission.$(POD_NAMESPACE).svc
         - --namespace=$(POD_NAMESPACE)
-        - --secret-name=ingress-nginx-admission
+        - --secret-name= nginx-ingress-nginx-admission
         env:
         - name: POD_NAMESPACE
           valueFrom:
@@ -565,7 +565,7 @@ spec:
         fsGroup: 2000
         runAsNonRoot: true
         runAsUser: 2000
-      serviceAccountName: ingress-nginx-admission
+      serviceAccountName:  nginx-ingress-nginx-admission
 ---
 apiVersion: batch/v1
 kind: Job
@@ -576,7 +576,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission-patch
+  name:  nginx-ingress-nginx-admission-patch
   namespace: k8s-xmas-workflow
 spec:
   template:
@@ -587,15 +587,15 @@ spec:
         app.kubernetes.io/name: ingress-nginx
         app.kubernetes.io/part-of: ingress-nginx
         app.kubernetes.io/version: 1.5.1
-      name: ingress-nginx-admission-patch
+      name:  nginx-ingress-nginx-admission-patch
     spec:
       containers:
       - args:
         - patch
-        - --webhook-name=ingress-nginx-admission
+        - --webhook-name= nginx-ingress-nginx-admission
         - --namespace=$(POD_NAMESPACE)
         - --patch-mutating=false
-        - --secret-name=ingress-nginx-admission
+        - --secret-name= nginx-ingress-nginx-admission
         - --patch-failure-policy=Fail
         env:
         - name: POD_NAMESPACE
@@ -614,7 +614,7 @@ spec:
         fsGroup: 2000
         runAsNonRoot: true
         runAsUser: 2000
-      serviceAccountName: ingress-nginx-admission
+      serviceAccountName:  nginx-ingress-nginx-admission
 ---
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
@@ -638,7 +638,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.5.1
-  name: ingress-nginx-admission
+  name:  nginx-ingress-nginx-admission
 webhooks:
 - admissionReviewVersions:
   - v1
