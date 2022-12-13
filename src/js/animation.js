@@ -1,10 +1,14 @@
 addEventListener('submit', (event) => {
     event.preventDefault();
-
-    Geoco(document.getElementById('search').value);
+    let adress = document.getElementById('search').value;
+    if (adress == "") { // Empty adress case
+        deer("noAdress"); // Call deer function
+        return;
+    }
+    Geoco(adress);
 
     if (ReadCookie('cookie') == "true") {
-        CreateCookie('address', document.getElementById('search').value);
+        CreateCookie('address', adress);
     } 
 
     AnimationTrigger();

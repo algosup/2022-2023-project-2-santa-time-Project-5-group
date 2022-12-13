@@ -23,15 +23,20 @@
             const now = new Date().getTime(),
                 distance = countDown - now + (10*offset);
 
-            document.getElementById("days").innerText = Math.floor(distance / (day)),
-                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+            document.getElementById("days").innerText = Math.floor(distance / (day)).toLocaleString(undefined, { minimumIntegerDigits: 2 }),
+            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)).toLocaleString(undefined, { minimumIntegerDigits: 2 }),
+            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)).toLocaleString(undefined, { minimumIntegerDigits: 2 }),
+            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second).toLocaleString(undefined, { minimumIntegerDigits: 2 });
 
             if (distance < 0) {
                 document.getElementById("headline").innerText = "It's christmas!";
                 document.getElementById("countdown").style.display = "none";
                 clearInterval(x);
+            }
+
+            if (offset != 0) {
+                let timer = 'XMAS : ' + (Math.floor(distance / (day)).toLocaleString(undefined, { minimumIntegerDigits: 2 })) + 'd ' + (Math.floor((distance % (day)) / (hour)).toLocaleString(undefined, { minimumIntegerDigits: 2 })) + 'h - ' + (Math.floor((distance % (hour)) / (minute)).toLocaleString(undefined, { minimumIntegerDigits: 2 })) + ':' + (Math.floor((distance % (minute)) / second).toLocaleString(undefined, { minimumIntegerDigits: 2 }));
+                document.title = timer;
             }
             //seconds
         }, 0)
