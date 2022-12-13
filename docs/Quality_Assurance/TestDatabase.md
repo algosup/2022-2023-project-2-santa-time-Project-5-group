@@ -80,7 +80,7 @@ Issues have to respect the **Template** that is provided on Github.
 # Server Application
 
 | **Test** | **Status** | **Description** | **Result** | **OS** | **Test Environment** | **Test Date** | **Tested By** | **Issue Link** | **Issue Description** | **Regression Test** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |--- |
 | 1 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Calculation Time shift should be exact | Time calculation is exact | <ul> <li>Android 12</li><li>IOS 16</li><li>MACOS 12</li><li>Windows 11</li></ul> | <ul> <li>Firefox</li><li>Safari</li><li>Chrome</li><li>Samsung Internet</li></ul> | 01/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
 | 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Load Response time from the server from 1 user | The response time is good. See [Website Load Testing](#website-load-testing)  | <ul><li>Windows 11</li></ul> | <ul><li>Chrome</li></ul> | 12/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
 | 2 | <ul> <li><span style="color:lightgreen; font-weight:bold">PASS</span></li> </ul> | Load Response time from the server from 19620 requests | The response time is good. See [Server Load Testing](#server-load-testing)  | <ul><li>Windows 11</li></ul> | <ul><li>Chrome</li></ul> | 12/12/2022 | Guillaume Riviere | / | / | <ul> <li><span style="color:blue; font-weight:bold">NO</span></li> </ul> |
