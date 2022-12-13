@@ -9,6 +9,7 @@ spec:
   selector:
     matchLabels:
       app: xmas
+  replicas: 2
   strategy:
     type: Recreate
   template:
