@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: xmas
-        image: k8sxmasimages.azurecr.io/k8sxmasimage:latest
+        image: nginximages.azurecr.io/nginximage:latest
         imagePullPolicy: Always
         resources:
         # Requests and limits are mendatory for AKS
