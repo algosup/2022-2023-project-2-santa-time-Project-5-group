@@ -93,6 +93,7 @@ function deer(param) {
     let noAdress = "Hey buddy, You didn't type any address.";
     let wrongAdress = "It seems that the address you typed is wrong. Don't you know where you live?";
     let noGeo = "I can't find you. Did you allow me to access your localisation?"
+    let noHttps = "The website isn't secure. I can't let you use that, sorry."
 
     container.style.opacity = "1";
 
@@ -108,6 +109,9 @@ function deer(param) {
     }else if (param == "intro") {
         message = intro;
         timer = 10000;
+    }else if (param == "noHttps") {
+        message = noHttps;
+        timer = 8500;
     }
 
     if (message != undefined) {

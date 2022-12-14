@@ -5,9 +5,9 @@
         day = hour * 24;
 
 
-    let date = 0;
+    let date = new Date().getTime();
 
-    fetch("https://worldtimeapi.org/api/timezone/Europe/London")
+    fetch("http://worldtimeapi.org/api/timezone/Europe/London")
     .then(r => r.json())
     .then(data => {
         let now = new Date(data.datetime);
