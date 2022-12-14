@@ -13,9 +13,8 @@ env:
     DEPLOYMENT_MANIFEST_PATH: |
         ./.k8s/xmas-deploy.yml
         ./.k8s/xmas-service.yml
-        ./.k8s/xmas-ressource.yml
+        ./.k8s/xmas-resource.yml
         ./.k8s/xmas-ingress.yml
-        ./.k8s/xmas-cert.yml
 jobs:
     buildImage:
         permissions:
