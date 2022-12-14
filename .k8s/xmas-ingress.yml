@@ -5,7 +5,14 @@ metadata:
   labels:
     app: xmas
     uri: xmas.algosup.com
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
 spec:
+  tls:
+  - hosts:
+    - xmas.algosup.com
+    secretName: xmas-tls
   rules:
   - host: xmas.algosup.com
     http:
