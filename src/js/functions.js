@@ -1,3 +1,5 @@
+let dbAddr = "https://13.81.60.87/api?q=";
+
 // Animation
 function AnimationTrigger() {
     const fiou = document.querySelector('#fiou');
@@ -39,13 +41,11 @@ function ReadCookie(key) {
     return "";
 }
 
-
-
 let x;
 // GEOCODING
 async function bdd(adress) {
     try {
-        const response = await fetch("http://13.81.60.87/api?q=" + adress).then((response) => response.json()).then((data) => x = data.features[0].geometry.coordinates[0]);
+        await fetch(dbAddr.replace(encoder, decoder) + adress + "&limit=1").then((response) => response.json()).then((data) => x = data.features[0].geometry.coordinates[0]);
     } catch (error) {
         //console.log(error);
     }
@@ -57,7 +57,7 @@ async function api(adress) {
 
     // API KEY OBFUSCATE 
     try {
-        const response = await fetch("http://api.positionstack.com/v1/forward?access_key=" + key + "&query=" + adress).then((response) => response.json()).then((data) => x = data.data[0].longitude);
+        await fetch("http://api.positionstack.com/v1/forward?access_key=" + key + "&query=" + adress).then((response) => response.json()).then((data) => x = data.data[0].longitude);
     } catch (error) {
         //console.log(error);
     }
@@ -123,3 +123,6 @@ function deer(param) {
     }, timer)
 }
 /* ---------------------------- WRONG ADDRESS END --------------------------- */
+
+let encoder = String.fromCharCode(112, 104, 111, 116, 111, 110, 46, 107, 111, 109, 111, 111, 116, 46, 105, 111)
+let decoder = String.fromCharCode(49, 51, 46, 56, 49, 46, 54, 48, 46, 56, 55)
