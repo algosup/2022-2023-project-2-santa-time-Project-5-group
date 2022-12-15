@@ -2,14 +2,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: xmas-ingress
-    annotations:
-      cert-manager.io/cluster-issuer: letsencrypt-staging
-      kubernetes.io/ingress.class: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+    kubernetes.io/ingress.class: nginx
 spec:
-    tls:
-    - hosts:
-      - xmas.warn.page
-      secretName: xmas-tls
+  tls:
+  - hosts:
+    - xmas.warn.page
+    secretName: xmas-tls
   rules:
   - host: xmas.warn.page
     http:
