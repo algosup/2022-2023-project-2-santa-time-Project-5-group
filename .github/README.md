@@ -14,3 +14,7 @@
 
 - [Project management](https://github.com/orgs/algosup/projects/3/views/1)
 - [Minute meeting from 2022-11-29](https://docs.google.com/document/d/1Scj8d5lEdqCs5IjXjJGSmHVn3eWmaArpvJs8u3mN9VM/edit?usp=sharing)
+
+## Migrate the solution
+
+- [Migration step-by-step](https://github.com/algosup/2022-2023-project-2-santa-time-Project-5-group/blob/main/docs/Migration.md)
