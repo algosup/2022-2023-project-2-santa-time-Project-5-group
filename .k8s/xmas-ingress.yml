@@ -13,7 +13,7 @@ spec:
     secretName: xmas-tls
   - hosts:
     - xmas.warn.page
-    secretName: xmas-tls
+    secretName: xmas-warn-tls
   rules:
   - host: xmas.algosup.com
     http:
