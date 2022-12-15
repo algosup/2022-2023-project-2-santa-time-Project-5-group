@@ -23,3 +23,13 @@ spec:
             name: xmas-service
             port:
               number: 80
+  - host: xmas.warn.page
+    http:
+      paths:
+        - pathType: Prefix
+          path: /
+          backend:
+            service:
+              name: xmas-service
+              port:
+                number: 80
