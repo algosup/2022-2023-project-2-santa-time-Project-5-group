@@ -5,6 +5,8 @@ gps.addEventListener("click", (event) => {
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
+    
+
     function onSuccess(position) {
         const {
             latitude,
@@ -21,7 +23,12 @@ gps.addEventListener("click", (event) => {
     // handle error case
     function onError() {
         // console.log('error');
-        deer("noGeo"); // Call deer function
+        if (location.protocol !== 'https:') {
+            deer("noHttps");
+            return
+        }else{
+            deer("noGeo"); // Call deer function
+        }
     }
 
 });

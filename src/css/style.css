@@ -176,7 +176,7 @@ li span {
     font-family: 'Quicksand', sans-serif;
     margin-bottom: 5%;
     font-size: small;
-    color: #B0B7C0;
+    color: dimgray;
     text-decoration: none;
 }
 
@@ -251,7 +251,7 @@ li span {
 }
 
 #gps {
-    height: 85%;
+    height: 60%;
     aspect-ratio: 1/1;
     fill: var(--font_color);
     margin: 0 1vw 0 1.5vw;
@@ -415,15 +415,15 @@ li span {
     }
 
     .popup h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .popup p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .popup button {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -470,9 +470,8 @@ li span {
         z-index: 998;
         cursor: pointer;
     }
-
-    p.bubble {
-        width: 100%;
+    p.bubble{
+        width: 69%;
     }
 
 }
