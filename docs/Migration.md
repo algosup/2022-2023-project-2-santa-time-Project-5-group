@@ -37,10 +37,10 @@ This guide should be followed on step-by-step.
     7. Don't change the build context
     8. Create a new Azure Container Registry
     9. Create a new Azure Container Registry image
-    :information_source: keep those names in mind, you will need them for the next Major step (GitHub)
+    - :information_source: keep those names in mind, you will need them for the next Major step (GitHub)
     10. Tick the Kubernetes manifest file
     11. Select the Kubernetes manifest file path (in .k8s/ each xmas-xxxx.yml)
-    :warning: Don't select cert-xxxx.yml manifests
+    - :warning: Don't select cert-xxxx.yml manifests
     12. Create a namespace "ingress-nginx"
     13. Click on Review + create
     14. Click on Create
@@ -48,7 +48,7 @@ This guide should be followed on step-by-step.
 ## GitHub Workflow
 1. Commit & Push the next change in the freshly new pull request
 2. In the xmas-deployment.yml manifest change the image (line 10)
-:information_source: the image should look like this: `registryname.azurecr.io/registeryimage:latest`
+- :information_source: the image should look like this: `registryname.azurecr.io/registeryimage:latest`
 3. Merge the pull request
 4. Wait for the deployment to be done
 
@@ -66,7 +66,7 @@ This guide should be followed on step-by-step.
 4. Show advanced settings
 5. Select the right subscription
 6. Select the right resource group
-:warning: It should be the same as your cluster, if not, you might have selected the wrong subscription
+- :warning: It should be the same as your cluster, if not, you might have selected the wrong subscription
 7. Chose a storage account name (lowercase, no special characters)
 8. Chose a file share name (lowercase, no special characters)
 9. Create the storage
@@ -98,7 +98,7 @@ spec:
          class:  nginx
 " > cert-staging.yml
 ```
-:warning: Don't forget to change the email address
+- :warning: Don't forget to change the email address
 3. Create the ClusterIssuer
 ```bash
 kubectl create -f cert-staging.yml
@@ -127,7 +127,7 @@ spec:
           class:  nginx
 " > cert-prod.yml
 ```
-:warning: Don't forget to change the email address
+- :warning: Don't forget to change the email address
 5. Create the production ClusterIssuer
 ```bash
 kubectl create -f cert-prod.yml
@@ -136,4 +136,4 @@ kubectl create -f cert-prod.yml
 
 ## Final step
 1. Go to your domain name
-:information_source: Everything should be working now
+- :information_source: Everything should be working now
