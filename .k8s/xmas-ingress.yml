@@ -3,15 +3,16 @@ kind: Ingress
 metadata:
   name: xmas-ingress
   annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: / # custom
     cert-manager.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/ingress.class: nginx
 spec:
   tls:
   - hosts:
-    - xmas.warn.page
+    - xmas.algosup.com
     secretName: xmas-tls
   rules:
-  - host: xmas.warn.page
+  - host: xmas.algosup.com
     http:
       paths:
       - pathType: Prefix
