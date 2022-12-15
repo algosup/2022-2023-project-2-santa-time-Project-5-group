@@ -1,19 +1,19 @@
-name: azure-k8s-xmas-deploy
+name: k8s-workflow-xmas
 "on":
     push:
         branches:
             - main
     workflow_dispatch: {}
 env:
-    ACR_RESOURCE_GROUP: prj5
-    AZURE_CONTAINER_REGISTRY: k8sxmasimages
+    ACR_RESOURCE_GROUP: acrworkflow1670971933964
+    AZURE_CONTAINER_REGISTRY: nginximages
     CLUSTER_NAME: SantaKubernetes
     CLUSTER_RESOURCE_GROUP: prj5
-    CONTAINER_NAME: k8sxmasimage
+    CONTAINER_NAME: nginximage
     DEPLOYMENT_MANIFEST_PATH: |
-        ./.k8s/xmas-ressource.yml
-        ./.k8s/xmas-service.yml
         ./.k8s/xmas-deploy.yml
+        ./.k8s/xmas-service.yml
+        ./.k8s/xmas-resource.yml
         ./.k8s/xmas-ingress.yml
 jobs:
     buildImage:
@@ -58,4 +58,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: k8s-xmas-workflow
+                namespace: ingress-nginx
