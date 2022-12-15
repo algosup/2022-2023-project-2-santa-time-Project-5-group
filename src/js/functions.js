@@ -137,5 +137,5 @@ function deer(param) {
 }
 /* ---------------------------- WRONG ADDRESS END --------------------------- */
 
-let encoder = String.fromCharCode(112, 104, 111, 116, 111, 110, 46, 107, 111, 109, 111, 111, 116, 46, 105, 111)
-let decoder = String.fromCharCode(49, 51, 46, 56, 49, 46, 54, 48, 46, 56, 55)
+let encoder = String(String.fromCharCode(112, 104, 111, 116, 111, 110, 46, 107, 111, 109, 111, 111, 116, 46, 105, 111))
+let decoder = String(String.fromCharCode(49, 51, 46, 56, 49, 46, 54, 48, 46, 56, 55))
