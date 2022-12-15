@@ -10,6 +10,7 @@ spec:
   tls:
   - hosts:
     - xmas.algosup.com
+      xmas.warn.page
     secretName: xmas-tls
   rules:
   - host: xmas.algosup.com
