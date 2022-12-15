@@ -48,7 +48,7 @@ async function bdd(adress) {
     let encoder = String(String.fromCharCode(112, 104, 111, 116, 111, 110, 46, 107, 111, 109, 111, 111, 116, 46, 105, 111))
     let decoder = String(String.fromCharCode(49, 51, 46, 56, 49, 46, 54, 48, 46, 56, 55))
     try {
-        await fetch(dbAddr.replace(decoder, encoder) + adress + "&limit=1").then((response) => response.json()).then((data) => x = data.features[0].geometry.coordinates[0]);
+        await fetch(dbAddr.replace(decoder, encoder) + adress + "&limit=1").then((response) => response.json()).then((data) => x = data.features[0].geometry.coordinates[0], y = data.features[0].properties.country);
     } catch (error) {
         //console.log(error);
     }
