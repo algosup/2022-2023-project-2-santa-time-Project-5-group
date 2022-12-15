@@ -12,7 +12,7 @@ if (ReadCookie('cookie') == "true") {
     if (ReadCookie('address') != "") {
         search.value = ReadCookie('address');
         Geoco(ReadCookie('address'));
-        console.log(ReadCookie('address'));
+        //console.log(ReadCookie('address'));
         AnimationTrigger();
     }
 } else {

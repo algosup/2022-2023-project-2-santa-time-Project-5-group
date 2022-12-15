@@ -1,11 +1,24 @@
 addEventListener('submit', (event) => {
     event.preventDefault();
-    let adress = document.getElementById('search').value;
+    
+    let search = document.getElementById('search');
+    let adress = search.value;
+
     if (adress == "") { // Empty adress case
         deer("noAdress"); // Call deer function
         return;
     }
-    Geoco(adress);
+    adress = Geoco(adress);
+
+    if (adress == undefined) { // No adress found case
+        search.value = "";
+        return;
+    }else if (typeof(adress) == 'object') { // No adress found case
+        search.value = "";
+        deer("noDb");
+        return;
+    }
+    search.value = adress;
 
     if (ReadCookie('cookie') == "true") {
         CreateCookie('address', adress);
