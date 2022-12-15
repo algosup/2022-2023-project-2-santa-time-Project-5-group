@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - xmas.warn.page
+    - xmas.algosup.com
     secretName: xmas-tls
   rules:
-  - host: xmas.warn.page
+  - host: xmas.algosup.com
     http:
       paths:
       - pathType: Prefix
