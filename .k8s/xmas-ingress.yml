@@ -19,6 +19,6 @@ spec:
         path: /
         backend:
           service:
-            name: xmas
+            name: xmas-service
             port:
               number: 80
