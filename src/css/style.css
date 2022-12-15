@@ -175,7 +175,7 @@ li span {
     font-family: 'Quicksand', sans-serif;
     margin-bottom: 5%;
     font-size: small;
-    color: gainsboro;
+    color: dimgray;
     text-decoration: none;
 }
 
@@ -250,7 +250,7 @@ li span {
 }
 
 #gps {
-    height: 85%;
+    height: 60%;
     aspect-ratio: 1/1;
     fill: var(--font_color);
     margin: 0 1vw 0 1.5vw;
