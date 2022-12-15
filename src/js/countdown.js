@@ -7,7 +7,7 @@
 
     let date = new Date().getTime();
 
-    fetch("http://worldtimeapi.org/api/timezone/Europe/London")
+    fetch("https://worldtimeapi.org/api/timezone/Europe/London")
     .then(r => r.json())
     .then(data => {
         let now = new Date(data.datetime);
