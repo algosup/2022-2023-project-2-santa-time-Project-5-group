@@ -43,15 +43,26 @@ function ReadCookie(key) {
 
 let x;
 let y;
+let request;
 // GEOCODING
 async function bdd(adress) {
     let encoder = String(String.fromCharCode(112, 104, 111, 116, 111, 110, 46, 107, 111, 109, 111, 111, 116, 46, 105, 111))
     let decoder = String(String.fromCharCode(49, 51, 46, 56, 49, 46, 54, 48, 46, 56, 55))
     try {
-        await fetch(dbAddr.replace(decoder, encoder) + adress + "&limit=1").then((response) => response.json()).then((data) => x = data.features[0].geometry.coordinates[0], y = data.features[0].properties.country);
+        await fetch(dbAddr.replace(decoder, encoder) + adress + "&limit=1").then((response) => response.json()).then((data) => request = data);
     } catch (error) {
         //console.log(error);
     }
+    
+    if ( request.hasOwnProperty('features')) {
+        x = request.features[0].geometry.coordinates[0];
+        y = request.features[0].properties.country;
+    } else {
+        deer("wrongAdress");
+        return;
+    }
+    // console.log( x);
+    // console.log( y);
     return x;
 }
 
